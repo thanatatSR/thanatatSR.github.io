@@ -121,10 +121,12 @@ const shoesData = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const shoesContainer = document.getElementById("shoes-container");
+const searchBar = document.getElementById("search-bar");
+const shoesContainer = document.getElementById("shoes-container");
 
-  shoesData.forEach((shoe) => {
+const renderShoes = (shoes) => {
+  shoesContainer.innerHTML = '';
+  shoes.forEach((shoe) => {
     const shoeCard = document.createElement("div");
     shoeCard.classList.add("product-card");
     if (shoe.promotion) {
@@ -150,4 +152,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     shoesContainer.appendChild(shoeCard);
   });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderShoes(shoesData);
 });
+
+const handleSearch = () => {
+  const query = searchBar.value.toLowerCase().split(' ');
+  const filteredShoes = shoesData.filter((shoe) => {
+    const shoeName = shoe.name.toLowerCase()
+    const shoeType = shoe.type.toLowerCase()
+    return query.every(word => shoeName.includes(word) || shoeType.includes(word))
+  });
+  
+  renderShoes(filteredShoes);
+};

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -45,7 +49,7 @@
         </button>
       </div>
       <div class="logo">
-        <a href="#">
+        <a href="index.html">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
             alt="Nike"
@@ -54,15 +58,19 @@
         </a>
       </div>
       <div class="menu">
-        <a href="#">New Arrivals</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Kids</a>
+        <a href="product.html">New Arrivals</a>
+        <a href="product.html">Men</a>
+        <a href="product.html">Women</a>
+        <a href="product.html">Kids</a>
       </div>
       <div class="search-user-favorites-cart">
         <div class="search-container">
-          <input type="text" placeholder="Search" />
-          <button class="search-button" aria-label="Search">
+          <input type="text" placeholder="Search" id="search-bar" />
+          <button
+            class="search-button"
+            aria-label="Search"
+            onclick="handleSearch()"
+          >
             <svg
               fill="none"
               height="24"
@@ -151,69 +159,132 @@
       </div>
     </nav>
     <div class="container">
-      <div class="cover">
-        <div class="selector">
-          <div class="selector-group">
-            <a href="#" class="selector-link selected">All</a>
-            <a href="#" class="selector-link">Jordan</a>
-            <a href="#" class="selector-link">Lifestyle</a>
-            <a href="#" class="selector-link">Run</a>
-            <a href="#" class="selector-link">Training</a>
-            <a href="#" class="selector-link">Football</a>
-            <a href="#" class="selector-link">Basketball</a>
-            <a href="#" class="selector-link">Golf</a>
+      <div class="filmstrip">
+        <section class="filmstrip__section">
+          <div class="image-wrapper">
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_1457,c_limit/b29b4905-2da2-48b3-bda8-9eb33333795c/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87-nike.png"
+              alt="Nike Electric Pack"
+            />
           </div>
-          <div class="filter-container">
-            <button class="filter-button" aria-label="Filter">
-              Filter and Sort
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line x1="4" y1="21" x2="4" y2="14" />
-                <line x1="4" y1="10" x2="4" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="12" />
-                <line x1="12" y1="8" x2="12" y2="3" />
-                <line x1="20" y1="21" x2="20" y2="16" />
-                <line x1="20" y1="12" x2="20" y2="3" />
-                <line x1="1" y1="14" x2="7" y2="14" />
-                <line x1="9" y1="8" x2="15" y2="8" />
-                <line x1="17" y1="16" x2="23" y2="16" />
-              </svg>
-            </button>
+          <div class="mobile-image-wrapper">
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_393,c_limit/2245bf60-af74-4b48-86f5-d0781832c47f/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87-nike.png"
+              alt="Nike Electric Pack"
+            />
           </div>
-          <button class="icon filter-icon">
-            <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line x1="4" y1="21" x2="4" y2="14" />
-              <line x1="4" y1="10" x2="4" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="12" />
-              <line x1="12" y1="8" x2="12" y2="3" />
-              <line x1="20" y1="21" x2="20" y2="16" />
-              <line x1="20" y1="12" x2="20" y2="3" />
-              <line x1="1" y1="14" x2="7" y2="14" />
-              <line x1="9" y1="8" x2="15" y2="8" />
-              <line x1="17" y1="16" x2="23" y2="16" />
-            </svg>
-          </button>
-        </div>
-        <div class="grid" id="shoes-container"></div>
+          <div class="text-wrapper">
+            <h3 class="text-title">THE WINNER&#39;S CURSE</h3>
+            <p class="text-subtitle">
+              Every ring. Every medal. Every record. His hunger insatiable.
+              LeBron James has<br />no choice but to try to win again. Watch to
+              find out what it takes.
+            </p>
+            <div class="explore-button-wrapper">
+              <button class="explore-button" onclick="handleExplore()">Explore</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="carousel">
+        <section class="carousel__section">
+          <div class="carousel-title">
+            <h2>WHAT'S HOT</h2>
+          </div>
+          <div class="carousel-wrapper" id="shoes-container">
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="hidden">Bestseller!</p>
+                <p class="product-title">"Nike Air Force 1 '07</p>
+                <p class="product-subtitle">Men's Shoes</p>
+                <p class="product-price">£119.99</p>
+                <p class="hidden">Get 20 % discount Code: EXTRA20</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <footer class="footer">
@@ -223,6 +294,6 @@
       <a href="#" class="footer-link">Imprint</a>
       <a href="#" class="footer-link">© 2024 YIKE Ladprao Co., Ltd.</a>
     </footer>
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

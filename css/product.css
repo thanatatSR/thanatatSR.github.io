@@ -138,7 +138,6 @@ body {
   max-width: 100%;
   width: 1280px;
   margin: 0 auto;
-  padding: 0 15px;
   transition: width 0.9s ease-out;
 }
 
@@ -146,14 +145,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: 100%;
+  padding: 0 15px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
 .selector {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   position: -webkit-sticky;
@@ -385,20 +386,6 @@ body {
     padding-right: 0px;
   }
 
-  .selector {
-    justify-content: center;
-  }
-
-  .filter-container {
-    display: none;
-  }
-
-  .filter-icon {
-    display: block;
-    margin-left: 1rem;
-    rotate: 90deg;
-  }
-
   .grid {
     grid-template-columns: repeat(3, 33.33%);
   }
@@ -451,14 +438,29 @@ body {
 
   .selector {
     font-size: 12px;
+    justify-content: space-between;
+    width: 75vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
   }
 
   .selector-group {
     gap: 0.5rem;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .selector-group a {
     padding: 0.75rem 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .filter-button {
+    display: none;
   }
 
   .filter-icon {
@@ -468,6 +470,12 @@ body {
   .filter-icon svg {
     width: 16px;
     height: 16px;
+  }
+
+  .filter-icon {
+    display: block;
+    margin-left: 1rem;
+    rotate: 90deg;
   }
 
   .product-card:hover {

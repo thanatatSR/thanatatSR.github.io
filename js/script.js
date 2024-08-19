@@ -167,10 +167,16 @@ document.addEventListener("DOMContentLoaded", () => {
 const handleSearch = () => {
   const query = searchBar.value;
   if (query) {
-    window.location.href = `product.html?search=${encodeURIComponent(query)}`;
+    window.location.href = `product-catalog.html?search=${encodeURIComponent(query)}`;
   }
 }
 
+searchBar.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
+
 const handleExplore = () => {
-  window.location.href = `product.html`
+  window.location.href = `product-catalog.html`
 }

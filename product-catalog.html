@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Sneakers | Foot Finesse</title>
+    <link
+      rel="icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/product-catalog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="hamburger-menu">
+        <button class="icon hamburger-icon" aria-label="Menu">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="1" y1="12" x2="23" y2="12" />
+            <line x1="1" y1="6" x2="23" y2="6" />
+            <line x1="1" y1="18" x2="23" y2="18" />
+          </svg>
+        </button>
+        <button class="icon icon-960" aria-label="Favorites">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="index.html" onclick="localStorage.clear()">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
+            alt="Nike"
+            class="logo-image"
+          />
+        </a>
+      </div>
+      <div class="menu">
+        <a href="product-catalog.html">New Arrivals</a>
+        <a href="product-catalog.html">Men</a>
+        <a href="product-catalog.html">Women</a>
+        <a href="product-catalog.html">Kids</a>
+      </div>
+      <div class="search-user-favorites-cart">
+        <div class="search-container">
+          <input type="text" placeholder="Search" id="search-bar" />
+          <button
+            class="search-button"
+            aria-label="Search"
+            onclick="handleSearch()"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+        <button class="icon user-icon" aria-label="User">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.24 21C19.25 18.57 17.11 17 14.5 17h-5C6.89 17 4.75 18.57 3.76 21M16.5 3a6 6 0 1 1-9 0 6 6 0 0 1 9 0z"
+            />
+          </svg>
+        </button>
+        <button class="icon search-icon" aria-label="Search">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <button class="icon favorite-icon" aria-label="Favorites">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </button>
+        <button class="icon cart-icon" aria-label="Cart">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="cover">
+        <div class="wrapper">
+          <div class="selector">
+            <div class="selector-group" id="selectors-container">
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >All</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Air Force</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Air Max</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Air Presto</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Alphafly</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Dunk Low</a
+              >
+              <a href="#" class="selector-link" onclick="handleNavigate(this)"
+                >Mercurial</a
+              >
+            </div>
+            <div class="filter-container">
+              <button
+                class="filter-button"
+                aria-label="Filter"
+                onclick="handleOpenFilterPanel()"
+              >
+                Filter and Sort
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line x1="4" y1="21" x2="4" y2="14" />
+                  <line x1="4" y1="10" x2="4" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                  <line x1="20" y1="21" x2="20" y2="16" />
+                  <line x1="20" y1="12" x2="20" y2="3" />
+                  <line x1="1" y1="14" x2="7" y2="14" />
+                  <line x1="9" y1="8" x2="15" y2="8" />
+                  <line x1="17" y1="16" x2="23" y2="16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="icon filter-icon" onclick="handleOpenFilterPanel()">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line x1="4" y1="21" x2="4" y2="14" />
+              <line x1="4" y1="10" x2="4" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12" y2="3" />
+              <line x1="20" y1="21" x2="20" y2="16" />
+              <line x1="20" y1="12" x2="20" y2="3" />
+              <line x1="1" y1="14" x2="7" y2="14" />
+              <line x1="9" y1="8" x2="15" y2="8" />
+              <line x1="17" y1="16" x2="23" y2="16" />
+            </svg>
+          </button>
+        </div>
+        <div class="grid" id="shoes-container"></div>
+        <div class="filter-panel" id="filter-panel">
+          <div
+            class="filter-panel-blur"
+            onclick="handleCloseFilterPanel()"
+          ></div>
+          <div class="filter-panel-container">
+            <div class="filter-panel-header">
+              <h5>
+                <span class="filter-panel-header__title">Filter and Sort</span>
+                <span class="filter-panel-header__clear" onclick="clearAllFilters()">Clear All</span>
+                <span
+                  class="filter-panel-header__close"
+                  onclick="handleCloseFilterPanel()"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      y1="6"
+                      x2="6"
+                      y2="18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <line
+                      x1="6"
+                      y1="6"
+                      x2="18"
+                      y2="18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </h5>
+            </div>
+            <div class="filter-panel-body">
+              <details id="filter-panel-body__sorting" class="filter-panel-body__sorting">
+                <summary>
+                  <span>Sort By</span>
+                </summary>
+                <div class="filter-panel-body__sorting__option">
+                  <ul>
+                    <li onclick="handleSortProduct('best-sellers')">Feature</li>
+                    <li onclick="handleSortProduct('newest-to-oldest')">Newest</li>
+                    <li onclick="handleSortProduct('price-low-to-high')">Price [Low - High]</li>
+                    <li onclick="handleSortProduct('price-high-to-low')">Price [High - Low]</li>
+                  </ul>
+                </div>
+              </details>
+              <details id="filter-panel-body__collection" class="filter-panel-body__collection">
+                <summary>
+                  <span>Collections</span>
+                </summary>
+                <div class="filter-panel-body__collection__option">
+                  <ul>
+                      <li onclick="handleSearchByCollections('Air Force')">Air Force</li>
+                      <li onclick="handleSearchByCollections('Air Max')">Air Max</li>
+                      <li onclick="handleSearchByCollections('Air Presto')">Air Presto</li>
+                      <li onclick="handleSearchByCollections('Alphafly')">Alphafly</li>
+                      <li onclick="handleSearchByCollections('Dunk Low')">Dunk Low</li>
+                      <li onclick="handleSearchByCollections('Mercurial')">Mercurial</li>
+                  </ul>
+                </div>
+              </details>
+              <details id="filter-panel-body__product-type" class="filter-panel-body__product-type">
+                <summary>
+                  <span>Product Type</span>
+                </summary>
+                <div class="filter-panel-body__product-type__option">
+                  <ul>
+                    <li>
+                      <input
+                        onclick=""
+                        type="checkbox"
+                        id="men"
+                        name="type"
+                        value="Men's"
+                      />
+                      <label for="men">Men's</label>
+                    </li>
+                    <li>
+                      <input
+                        onclick=""
+                        type="checkbox"
+                        id="unisex"
+                        name="type"
+                        value="Unisex"
+                      />
+                      <label for="unisex">Unisex</label>
+                    </li>
+                    <li>
+                      <input
+                        onclick=""
+                        type="checkbox"
+                        id="workout"
+                        name="type"
+                        value="Workout"
+                      />
+                      <label for="workout">Workout</label>
+                    </li>
+                    <li>
+                      <input
+                        onclick=""
+                        type="checkbox"
+                        id="running"
+                        name="type"
+                        value="Running"
+                      />
+                      <label for="running">Running</label>
+                    </li>
+                    <li>
+                      <input
+                        onclick=""
+                        type="checkbox"
+                        id="football"
+                        name="type"
+                        value="Football"
+                      />
+                      <label for="football">Football</label>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details id="filter-panel-body__price" class="filter-panel-body__price">
+                <summary>
+                  <span>Price</span>
+                </summary>
+                <div class="filter-panel-body__price__bar">
+                  <div class="range-container">
+                    <div class="form-control">
+                      <p
+                        class="form-control-container__time__input"
+                        id="from-input"
+                      >
+                        £79
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="form-control-container__time__input"
+                        id="to-input"
+                      >
+                        £295
+                      </p>
+                    </div>
+                    <div class="slider-control">
+                      <input
+                        type="range"
+                        id="from-slider"
+                        value="79"
+                        min="79"
+                        max="295"
+                        onchange="handlePriceFilter()"
+                      />
+                      <input
+                        type="range"
+                        id="to-slider"
+                        value="295"
+                        min="79"
+                        max="295"
+                        onchange="handlePriceFilter()"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="filter-panel-footer">
+              <button class="button-apply" onclick="handleShoeTypeFilter()">
+                <span>Apply</span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <polyline points="14 6 22 12 14 18" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <a href="#" class="footer-link">Cookie Settings</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms and Conditions</a>
+      <a href="#" class="footer-link">Imprint</a>
+      <a href="#" class="footer-link">© 2024 YIKE Ladprao Co., Ltd.</a>
+    </footer>
+    <script src="./js/product-catalog.js"></script>
+  </body>
+</html>

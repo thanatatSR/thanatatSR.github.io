@@ -1,6 +1,6 @@
 const shoesData = [
   {
-    id: 1,
+    id: "01",
     name: "Nike Air Force 1 '07",
     type: "Men's Shoes",
     price: "£119.99",
@@ -10,7 +10,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 2,
+    id: "02",
     name: "Nike Air Max 95",
     type: "Shoes",
     price: "£174.99",
@@ -20,7 +20,7 @@ const shoesData = [
     bestseller: false,
   },
   {
-    id: 3,
+    id: "03",
     name: "Nike Alphafly 3 Electric",
     type: "Men's Road Racing Shoes",
     price: "£294.99",
@@ -30,7 +30,7 @@ const shoesData = [
     bestseller: false,
   },
   {
-    id: 4,
+    id: "04",
     name: "Nike Air Max Alpha Trainer 5",
     type: "Men's Workout Shoes",
     price: "£79.99",
@@ -40,7 +40,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 5,
+    id: "05",
     name: "Nike Air Presto",
     type: "Men's Shoes",
     price: "£129.99",
@@ -50,7 +50,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 6,
+    id: "06",
     name: "Nike Dunk Low Retro",
     type: "Men's Shoes",
     price: "£109.99",
@@ -60,7 +60,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 7,
+    id: "07",
     name: "Nike Dunk Low Retro",
     type: "Men's Shoes",
     price: "£109.99",
@@ -70,7 +70,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 8,
+    id: "08",
     name: "Nike Air Max 90",
     type: "Men's Shoes",
     price: "£134.99",
@@ -80,7 +80,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 9,
+    id: "09",
     name: "Nike Air Max 90",
     type: "Men's Shoes",
     price: "£144.99",
@@ -90,7 +90,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 10,
+    id: "10",
     name: "Nike Air Force 1 '07",
     type: "Men's Shoes",
     price: "£109.99",
@@ -100,7 +100,7 @@ const shoesData = [
     bestseller: true,
   },
   {
-    id: 11,
+    id: "11",
     name: "Nike Dunk Low",
     type: "Men's Shoes",
     price: "£119.99",
@@ -110,7 +110,7 @@ const shoesData = [
     bestseller: false,
   },
   {
-    id: 12,
+    id: "12",
     name: "Nike Mercurial Vapor 16 Elite Electric",
     type: "FG Low-Top Football Boot",
     price: "£254.99",
@@ -135,6 +135,10 @@ const MAX_PRICE = 295;
 const renderShoes = (shoes) => {
   shoesContainer.innerHTML = "";
   shoes.forEach((shoe) => {
+    const hyperlink = document.createElement("a");
+    hyperlink.href = `product.html?id=${shoe.id + '01'}`
+    hyperlink.setAttribute('aria-label', `${shoe.name}`);
+
     const shoeCard = document.createElement("div");
     shoeCard.classList.add("product-card");
     if (shoe.promotion) {
@@ -158,7 +162,8 @@ const renderShoes = (shoes) => {
   </div>
   `;
 
-    shoesContainer.appendChild(shoeCard);
+    hyperlink.appendChild(shoeCard)
+    shoesContainer.appendChild(hyperlink);
   });
 };
 

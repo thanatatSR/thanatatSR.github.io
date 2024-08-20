@@ -235,6 +235,10 @@ body {
   grid-template-columns: repeat(4, 25%);
 }
 
+.grid a {
+  text-decoration: none;
+}
+
 .product-card {
   border: 1px solid rgba(0, 0, 0, 0);
   display: flex;
@@ -255,6 +259,7 @@ body {
 }
 
 .product-content {
+  color: black;
   position: relative;
   padding: 12px 0 2px 0;
   font-size: 16px;

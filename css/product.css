@@ -641,6 +641,15 @@ form {
   color: #ffffff;
 }
 
+.button--add:hover {
+  background-color: #666666;
+}
+
+.button-out-of-stock {
+  background-color: #666666;
+  cursor: default;
+}
+
 .button--fav {
   margin-top: 12px;
   background-color: transparent;
@@ -1154,5 +1163,10 @@ details::before {
 
 .footer-link:last-of-type::after {
   content: "";
+}
+
+.warning {
+  color: #722904;
+  background-color: #e3ac74;
 }
 

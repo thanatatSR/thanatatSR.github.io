@@ -100,28 +100,6 @@ const createElement = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const fullId = urlParams.get("id");
 
-  if (!fullId || fullId.length !== 4) {
-    console.error("Invalid ID in URL");
-    return;
-  }
-
-  const productId = fullId.substring(0, 2);
-  const colorVariantIndex = fullId.substring(2);
-
-  const shoe = shoesData.find((sh) => sh.id === productId);
-  if (!shoe) {
-    console.error("Shoe nor found");
-    return;
-  }
-
-  const colorVariant = shoe.colorVariants.find(
-    (cv) => cv.index === colorVariantIndex
-  );
-  if (!colorVariant) {
-    console.error("Color variant not found");
-    return;
-  }
-
   const imgContainer = document.getElementById("img-container__list");
   const imgSelected = document.getElementById("img-container__selected");
   const containerHeader = document.getElementById(
@@ -137,9 +115,33 @@ const createElement = () => {
     "container__product-info__detail__description__preview"
   );
   const mobileHeader = document.getElementById("mobile__header");
+  const warning = document.createElement("div");
 
   imgContainer.innerHTML = "";
   imgSelected.innerHTML = "";
+
+  if (!fullId || fullId.length !== 4) {
+    console.error("Invalid ID in URL");
+    return;
+  }
+
+  const productId = fullId.substring(0, 2);
+  const colorVariantIndex = fullId.substring(2);
+
+  let shoe = shoesData.find((sh) => sh.id === productId);
+  if (!shoe) {
+    shoe = shoesData.find((sh) => sh.id === "00");
+    warning.innerHTML = `<h1 class="warning">404: Croiss-can't find that shoe. But hey, at least you discovered something butter!</h1>`;
+  }
+
+  let colorVariant = shoe.colorVariants.find(
+    (cv) => cv.index === colorVariantIndex
+  );
+  if (!colorVariant) {
+    shoe = shoesData.find((sh) => sh.id === "00");
+    colorVariant = shoe.colorVariants.find((cv) => cv.index === "00");
+    warning.innerHTML = `<h1 class="warning">404: Croiss-can't find that shoe. But hey, at least you discovered something butter!</h1>`;
+  }
 
   if (colorVariant.bestseller) {
     const heroBadge = document.createElement("div");
@@ -254,7 +256,8 @@ const createElement = () => {
   carouselButton.appendChild(nextButton);
   imgSelected.appendChild(carouselButton);
 
-  containerHeader.innerHTML = `<h1 class="container__product-info__detail__header__title">
+  containerHeader.innerHTML = `${warning.innerHTML}
+              <h1 class="container__product-info__detail__header__title">
                 ${shoe.name}
               </h1>
               <h2 class="container__product-info__detail__header__subtitle">
@@ -276,28 +279,24 @@ const createElement = () => {
 
   colorwayFieldset.innerHTML = `<legend>Choose your style</legend>`;
   shoe.colorVariants.forEach((cv, index) => {
-    if (cv.outOfStock) {
-      const img = document.createElement("img");
-      img.src = cv.images[0];
-      img.alt = shoe.name;
-      img.className = `${
-        index === parseInt(colorVariantIndex) - 1
-          ? "selected out-of-stock"
-          : "out-of-stock"
-      }`;
-      colorwayFieldset.appendChild(img);
-    } else {
+    const img = document.createElement("img");
+    img.src = cv.images[0];
+    img.alt = `${shoe.name} in ${cv.colorName}`;
+    img.className = `${
+      index === parseInt(colorVariantIndex) - 1 ? "selected" : ""
+    } ${cv.outOfStock ? "out-of-stock" : ""}`.trim();
+
+    const addToCartButton = document.getElementById("button--add");
+    addToCartButton.classList.add("button-out-of-stock");
+    addToCartButton.disabled = true;
+    if (!cv.outOfStock) {
       const hyperlink = document.createElement("a");
       hyperlink.href = `product.html?id=${shoe.id + cv.index}`;
-      hyperlink.setAttribute("aria-label", `${shoe.name} in ${cv.colorName}`);
-      const img = document.createElement("img");
-      img.src = cv.images[0];
-      img.alt = shoe.name;
-      img.className = `${
-        index === parseInt(colorVariantIndex) - 1 ? "selected" : ""
-      }`;
+      hyperlink.setAttribute("aria-label", img.alt);
       hyperlink.appendChild(img);
       colorwayFieldset.appendChild(hyperlink);
+    } else {
+      colorwayFieldset.appendChild(img);
     }
   });
 

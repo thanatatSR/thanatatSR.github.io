@@ -8,6 +8,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png",
     promotion: true,
     bestseller: true,
+    color: "white",
   },
   {
     id: "02",
@@ -18,6 +19,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d4c31751-aa66-45da-a4c3-e10308e1ce6d/NIKE+AIR+MAX+95.png",
     promotion: false,
     bestseller: false,
+    color: "Iron Gray",
   },
   {
     id: "03",
@@ -28,6 +30,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5735da65-f28c-44b1-a281-868618c1c7b0/AIR+ZOOM+ALPHAFLY+NEXT%25+3+OLY.png",
     promotion: false,
     bestseller: false,
+    color: "Multi-Colour",
   },
   {
     id: "04",
@@ -38,6 +41,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c95a8a1b-8e71-487d-9407-a9b181fc7caa/M+NIKE+AIR+MAX+ALPHA+TRAINER+5.png",
     promotion: false,
     bestseller: true,
+    color: "Black",
   },
   {
     id: "05",
@@ -48,6 +52,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0e293b0d-0ce3-41fa-9898-9ca3cb7da3ea/NIKE+AIR+PRESTO.png",
     promotion: true,
     bestseller: true,
+    color: "Black",
   },
   {
     id: "06",
@@ -58,6 +63,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0a25e340-15d3-4d47-a8af-0586e8ab668b/NIKE+DUNK+LOW+RETRO.png",
     promotion: false,
     bestseller: true,
+    color: "Team Green",
   },
   {
     id: "07",
@@ -68,6 +74,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7ff6bde9-caad-444e-bd21-ee49b126fd85/NIKE+DUNK+LOW+RETRO.png",
     promotion: false,
     bestseller: true,
+    color: "Dragon Red",
   },
   {
     id: "08",
@@ -78,6 +85,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/wzitsrb4oucx9jukxsmc/AIR+MAX+90.png",
     promotion: false,
     bestseller: true,
+    color: "Iron Grey",
   },
   {
     id: "09",
@@ -88,6 +96,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d0370114-298a-474f-b4e3-4126943e1d30/AIR+MAX+90.png",
     promotion: true,
     bestseller: true,
+    color: "Glacier Blue",
   },
   {
     id: "10",
@@ -98,6 +107,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/350e7f3a-979a-402b-9396-a8a998dd76ab/AIR+FORCE+1+%2707.png",
     promotion: false,
     bestseller: true,
+    color: "White",
   },
   {
     id: "11",
@@ -108,6 +118,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/338d0737-bd55-4b33-86f4-e2f92a11d3c8/NIKE+DUNK+LOW+NN.png",
     promotion: false,
     bestseller: false,
+    color: "Baroque Brown",
   },
   {
     id: "12",
@@ -118,6 +129,7 @@ const shoesData = [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/69669444-60a6-44c4-8944-a076f01f8e0d/ZM+VAPOR+16+ELITE+FG+OLY.png",
     promotion: false,
     bestseller: false,
+    color: "Multi-Colour",
   },
 ];
 

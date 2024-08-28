@@ -185,6 +185,12 @@ const createElement = () => {
     });
   }
 
+  if (colorVariant.outOfStock) {
+    const addToCartButton = document.getElementById("button--add");
+    addToCartButton.classList.add("button-out-of-stock");
+    addToCartButton.disabled = true;
+  }
+
   colorVariant.sizeAvailable.forEach((size) => {
     const div = document.createElement("div");
     const input = document.createElement("input");
@@ -286,9 +292,6 @@ const createElement = () => {
       index === parseInt(colorVariantIndex) - 1 ? "selected" : ""
     } ${cv.outOfStock ? "out-of-stock" : ""}`.trim();
 
-    const addToCartButton = document.getElementById("button--add");
-    addToCartButton.classList.add("button-out-of-stock");
-    addToCartButton.disabled = true;
     if (!cv.outOfStock) {
       const hyperlink = document.createElement("a");
       hyperlink.href = `product.html?id=${shoe.id + cv.index}`;
@@ -323,5 +326,119 @@ const createElement = () => {
               : ""
           }`;
 };
+
+const addFavButton = document.getElementById("button--fav");
+const favButton = document.getElementById("favButton");
+const favButtonMobile = document.getElementById("favButtonMobile");
+const favCount = document.getElementById("favCount");
+const favCountMobile = document.getElementById("favCountMobile");
+const favoriteForm = document.getElementById("favoriteForm");
+const productId = new URLSearchParams(window.location.search).get("id");
+
+const getFavorites = () => {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+};
+
+const saveFavorites = (fav) => {
+  localStorage.setItem("favorites", JSON.stringify(fav));
+};
+
+const updateFavButtonState = () => {
+  addFavButton.onclick = toggleFavorite;
+  const favorites = getFavorites();
+  const isFavorite = favorites.some((fav) => fav.productId === productId);
+  favCount.textContent = favorites.length;
+  favCountMobile.textContent = favorites.length;
+  if (favorites.length > 0) {
+    favButton.classList.add("icon--active");
+    favButtonMobile.classList.add("icon--active");
+    favCount.classList.add("count--active");
+    favCountMobile.classList.add("count--active");
+  }
+  if (isFavorite) {
+    addFavButton.classList.add("button--fav--active");
+  } else {
+    addFavButton.classList.remove("button--fav--active");
+  }
+};
+
+const toggleFavorite = () => {
+  const selectedSize = favoriteForm.querySelector(
+    'input[name="size-radio"]:checked'
+  );
+  let favorites = getFavorites();
+
+  const isProductFavorite = favorites.some(
+    (fav) => fav.productId === productId
+  );
+  if (isProductFavorite) {
+    favorites = favorites.filter((fav) => fav.productId !== productId);
+  } else {
+    if (!selectedSize) {
+      alert("Please select a size before adding to favorites.");
+      return;
+    }
+    const favoriteItem = {
+      productId: productId,
+      size: selectedSize.value,
+    };
+    favorites.push(favoriteItem);
+  }
+
+  saveFavorites(favorites);
+  updateFavButtonState();
+};
+
+const cartButton = document.getElementById("cartButton");
+const addToCartButton = document.getElementById("button--add");
+const cartCount = document.getElementById("cartCount");
+
+const getCarts = () => {
+  return JSON.parse(localStorage.getItem("carts")) || [];
+};
+
+const saveCarts = (product) => {
+  localStorage.setItem("carts", JSON.stringify(product));
+};
+
+const updateCartButtonState = () => {
+  addToCartButton.onclick = addToCart;
+  const carts = getCarts();
+  cartCount.textContent = carts.length;
+  if (carts.length > 0) {
+    cartButton.classList.add("icon--active");
+    cartCount.classList.add("count--active");
+  }
+};
+
+const addToCart = () => {
+  const selectedSize = favoriteForm.querySelector(
+    'input[name="size-radio"]:checked'
+  );
+  const carts = getCarts();
+  const existingProduct = carts.findIndex(
+    (cart) => cart.productId === productId
+  );
+  if (existingProduct === -1) {
+    if (!selectedSize) {
+      alert("Please select a size before adding to favorites.");
+      return;
+    }
+    const cartItem = {
+      productId: productId,
+      size: selectedSize.value,
+    };
+    carts.push(cartItem);
+  } else {
+    alert("You already have this product in cart");
+    return;
+  }
+
+  saveCarts(carts);
+  updateCartButtonState();
+};
+
+updateFavButtonState();
+updateCartButtonState();
 
 document.addEventListener("DOMContentLoaded", createElement);

@@ -119,6 +119,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .icon svg {
@@ -127,9 +128,33 @@ body {
   stroke: black;
 }
 
+.icon--active svg {
+  fill: #111111;
+}
+
 .search-icon {
   display: none;
 }
+
+.count {
+  width: 16px;
+  height: 16px;
+  background-color: #2181b7;
+  color: #ffffff;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+}
+
+.count--active {
+  display: flex;
+}
+
 .container {
   width: 100%;
 }
@@ -363,6 +388,10 @@ body {
     width: 18px;
     height: 18px;
     stroke: black;
+  }
+
+  .hamburger-icon {
+    top: -2px;
   }
 
   .hamburger-icon svg {

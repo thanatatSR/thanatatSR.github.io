@@ -559,3 +559,46 @@ fromInput.oninput = () =>
 toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+
+const favButton = document.getElementById("favButton");
+const favButtonMobile = document.getElementById("favButtonMobile");
+const favCount = document.getElementById("favCount");
+const favCountMobile = document.getElementById("favCountMobile");
+const favoriteForm = document.getElementById("favoriteForm");
+const productId = new URLSearchParams(window.location.search).get("id");
+
+const getFavorites = () => {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+};
+
+const updateFavButtonState = () => {
+  const favorites = getFavorites();
+  favCount.textContent = favorites.length;
+  favCountMobile.textContent = favorites.length;
+  if (favorites.length > 0) {
+    favButton.classList.add("icon--active");
+    favButtonMobile.classList.add("icon--active");
+    favCount.classList.add("count--active");
+    favCountMobile.classList.add("count--active");
+  }
+};
+
+const cartButton = document.getElementById("cartButton");
+const addToCartButton = document.getElementById("button--add");
+const cartCount = document.getElementById("cartCount");
+
+const getCarts = () => {
+  return JSON.parse(localStorage.getItem("carts")) || [];
+};
+
+const updateCartButtonState = () => {
+  const carts = getCarts();
+  cartCount.textContent = carts.length;
+  if (carts.length > 0) {
+    cartButton.classList.add("icon--active");
+    cartCount.classList.add("count--active");
+  }
+};
+
+updateFavButtonState();
+updateCartButtonState();

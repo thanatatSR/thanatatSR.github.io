@@ -40,7 +40,7 @@
             <line x1="1" y1="18" x2="23" y2="18" />
           </svg>
         </button>
-        <button class="icon icon-960" aria-label="Favorites">
+        <button class="icon icon-960" id="favButtonMobile" aria-label="Favorites">
           <svg
             fill="none"
             height="24"
@@ -56,10 +56,11 @@
               d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
             />
           </svg>
+          <span id="favCountMobile" class="count">0</span>
         </button>
       </div>
       <div class="logo">
-        <a href="index.html" onclick="localStorage.clear()">
+        <a href="index.html" onclick="localStorage.removeItem('selectedLink')">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
             alt="Nike"
@@ -130,7 +131,7 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
         </button>
-        <button class="icon favorite-icon" aria-label="Favorites">
+        <button class="icon favorite-icon" id="favButton" aria-label="Favorites">
           <svg
             fill="none"
             height="24"
@@ -146,8 +147,9 @@
               d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
             />
           </svg>
+          <span id="favCount" class="count">0</span>
         </button>
-        <button class="icon cart-icon" aria-label="Cart">
+        <button class="icon cart-icon" id="cartButton" aria-label="Cart">
           <svg
             fill="none"
             height="24"
@@ -165,6 +167,7 @@
               d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
             />
           </svg>
+          <span id="cartCount" class="count">0</span>
         </button>
       </div>
     </nav>

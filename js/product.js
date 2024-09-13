@@ -134,6 +134,8 @@ const createElement = () => {
     warning.innerHTML = `<h1 class="warning">404: Croiss-can't find that shoe. But hey, at least you discovered something butter!</h1>`;
   }
 
+  document.title = `${shoe.name} | Foot Finesse`;
+
   let colorVariant = shoe.colorVariants.find(
     (cv) => cv.index === colorVariantIndex
   );
@@ -307,7 +309,7 @@ const createElement = () => {
                   ${colorVariant.detail[0]}
                 </p>
                 <ul>
-                  <li>${colorVariant.detail[1]}</li>
+                  <li>Colour Shown: ${colorVariant.detail[1]}</li>
                   <li>${colorVariant.detail[2]}</li>
                 </ul>`;
 

@@ -75,7 +75,7 @@ const shoesData = [
         outOfStock: true,
         detail: [
           "Darling, are you tired of flat, flavorless footwear? Say 'Au revoir!' to boring shoes and 'Bonjour!' to Le Crois-Sass-ant, the world's first edible high heels that are truly haute cuisine for your feet! These delectable delights aren't just shoes, they're a full sensory experience that will make you the toast of the town - literally!",
-          "Colour Shown: Golden-Brown/Chocolate-Drizzle",
+          "Golden-Brown/Chocolate-Drizzle",
           "Style: NOMNOM-420",
         ],
         images: [
@@ -163,7 +163,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Score major style points with this legendary hoops classic. Crossing hardwood comfort with off-court flair, this AF-1 pairs smooth overlays with subtle pops of colour for nothing-but-net style. Hidden Air units and durable, era-echoing '80s construction add the comfort you know and love.",
-          "Colour Shown: White/University Red/White",
+          "White/University Red/White",
           "Style: FZ7187-100",
         ],
         images: [
@@ -257,7 +257,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Score major style points with this legendary hoops classic. Crossing hardwood comfort with off-court flair, this AF-1 pairs smooth leather overlays with subtle design details for a nothing-but-net look. Hidden Air units and durable, era-echoing '80s construction add the comfort you know and love.",
-          "Colour Shown: Sail/Black/Sail",
+          "Sail/Black/Sail",
           "Style: FZ4625-100",
         ],
         images: [
@@ -359,7 +359,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.",
-          "Colour Shown: Iron Grey/Smoke Grey/Light Smoke Grey/Baltic Blue",
+          "Iron Grey/Smoke Grey/Light Smoke Grey/Baltic Blue",
           "Style: HM0622-003",
         ],
         images: [
@@ -453,7 +453,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.",
-          "Colour Shown: Wolf Grey/Pure Platinum/Photon Dust/Safety Orange",
+          "Wolf Grey/Pure Platinum/Photon Dust/Safety Orange",
           "Style: HM0622-002",
         ],
         images: [
@@ -549,7 +549,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.",
-          "Colour Shown: Black/Anthracite/Iron Grey/Vapour Green",
+          "Black/Anthracite/Iron Grey/Vapour Green",
           "Style: HM0622-001",
         ],
         images: [
@@ -655,7 +655,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Fine-tuned for marathon speed, the Alphafly 3 helps push you beyond what you thought possible. Three innovative technologies power your run: a double dose of Air Zoom units helps launch you into your next step; a full-length carbon-fibre plate helps propel you forwards with ease; and a heel-to-toe ZoomX foam midsole helps keep you fresh from start to 26.2. Time to leave your old personal records in the dust.",
-          "Colour Shown: Multi-Colour/Multi-Colour",
+          "Multi-Colour/Multi-Colour",
           "Style: FN7673-900",
         ],
         images: [
@@ -755,7 +755,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Fine-tuned for marathon speed, the Alphafly 3 helps push you beyond what you thought possible. Three innovative technologies power your run: engineered to the exact specifications of championship athletes, a double dose of Air Zoom units helps launch you into your next step; a full-length carbon-fibre plate helps propel you forwards with ease; and a heel-to-toe ZoomX foam midsole helps keep you fresh from start to 26.2. Time to leave your old personal records in the dust.",
-          "Colour Shown: Multi-Colour/Multi-Colour",
+          "Multi-Colour/Multi-Colour",
           "Style: HF7356-900",
         ],
         images: [
@@ -861,7 +861,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Finish your last rep with power and rack it with a roar that stuns the gym floor in the Nike Air Max Alpha Trainer 5. The Max Air cushioning offers comfortable stability for lifting whether it's a light or heavy day. A wide, flat base gives you enhanced stability and grip for all kinds of tough workouts without sacrificing style, as you roam from station to station and set to set.",
-          "Colour Shown: Black/Black/Dark Smoke Grey",
+          "Black/Black/Dark Smoke Grey",
           "Style: DM0829-010",
         ],
         images: [
@@ -967,7 +967,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "With a sleek design that's more comfortable than your favourite T-shirt, the Nike Air Presto is made to feel good and look fast. Its stretchy sleeve creates a cosy, sock-like fit while the super-soft foam adds spring to your step. Put them on and you'll never want to take them off.",
-          "Colour Shown: Black/White/Black",
+          "Black/White/Black",
           "Style: CT3550-001",
         ],
         images: [
@@ -1069,7 +1069,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "With a sleek design that's more comfortable than your favourite T-shirt, the Nike Air Presto is made to feel good and look fast. Its stretchy sleeve creates a cosy, sock-like fit while the super-soft foam adds spring to your step. Put them on and you'll never want to take them off.",
-          "Colour Shown: White/Pure Platinum",
+          "White/Pure Platinum",
           "Style: CT3550-100",
         ],
         images: [
@@ -1179,7 +1179,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century.",
-          "Colour Shown: White/White/Total Orange/Team Green",
+          "White/White/Total Orange/Team Green",
           "Style: DD1391-101",
         ],
         images: [
@@ -1277,7 +1277,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century.",
-          "Colour Shown: White/White/Black",
+          "White/White/Black",
           "Style: DD1391-100",
         ],
         images: [
@@ -1379,7 +1379,7 @@ const shoesData = [
         outOfStock: true,
         detail: [
           "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century.",
-          "Colour Shown: Valerian Blue/White/University Red/Valerian Blue",
+          "Valerian Blue/White/University Red/Valerian Blue",
           "Style: DD1391-400",
         ],
         images: [
@@ -1467,7 +1467,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "The 'Be True To Your School' pack pays homage to the Dunk's origins as the premier sneaker for top-tier university teams. Drawing inspiration from the original ad campaign, this pack features colors that speak to basketball excellence. The smooth leather upper with its perfect sheen ensures these kicks are absolute winners. It's time to lace up and showcase that varsity spirit. Are you ready to join the game?",
-          "Colour Shown: White/Black/Dragon Red",
+          "White/Black/Dragon Red",
           "Style: DV0833-108",
         ],
         images: [
@@ -1565,7 +1565,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "The 'Be True To Your School' pack pays homage to the Dunk's origins as the premier sneaker for top-tier university teams. Drawing inspiration from the original ad campaign, this pack features colors that speak to basketball excellence. The smooth leather upper with its perfect sheen ensures these kicks are absolute winners. It's time to lace up and showcase that varsity spirit. Are you ready to join the game?",
-          "Colour Shown: White/Black/Dusty Cactus",
+          "White/Black/Dusty Cactus",
           "Style: DV0833-109",
         ],
         images: [
@@ -1663,7 +1663,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "The 'Be True To Your School' pack pays homage to the Dunk's origins as the premier sneaker for top-tier university teams. Drawing inspiration from the original ad campaign, this pack features colors that speak to basketball excellence. The smooth leather upper with its perfect sheen ensures these kicks are absolute winners. It's time to lace up and showcase that varsity spirit. Are you ready to join the game?",
-          "Colour Shown: White/Picific Moss",
+          "White/Picific Moss",
           "Style: DV0833-105",
         ],
         images: [
@@ -1769,7 +1769,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "No pair soars higher, feels more comfortable, or has proven itself quite like this one. The Nike Air Max 90 follows in the footsteps of its OG running shoe predecessor, featuring the iconic waffle outsole, stitched overlays, and classic TPU accents. It comes in timeless colorways that celebrate your fresh look, while the Max Air cushioning system enhances comfort for your journey.",
-          "Colour Shown: Iron Grey/Dark Smoke Grey/Black/White",
+          "Iron Grey/Dark Smoke Grey/Black/White",
           "Style: CN8490-002",
         ],
         images: [
@@ -1863,7 +1863,7 @@ const shoesData = [
         outOfStock: true,
         detail: [
           "No pair soars higher, feels more comfortable, or has proven itself quite like this one. The Nike Air Max 90 follows in the footsteps of its OG running shoe predecessor, featuring the iconic waffle outsole, stitched overlays, and classic TPU accents. It comes in timeless colorways that celebrate your fresh look, while the Max Air cushioning system enhances comfort for your journey.",
-          "Colour Shown: White/White/Wolf Grey/White",
+          "White/White/Wolf Grey/White",
           "Style: CN8490-100",
         ],
         images: [
@@ -1943,7 +1943,7 @@ const shoesData = [
         outOfStock: true,
         detail: [
           "No pair soars higher, feels more comfortable, or has proven itself quite like this one. The Nike Air Max 90 follows in the footsteps of its OG running shoe predecessor, featuring the iconic waffle outsole, stitched overlays, and classic TPU accents. It comes in timeless colorways that celebrate your fresh look, while the Max Air cushioning system enhances comfort for your journey.",
-          "Colour Shown: White/White/Black",
+          "White/White/Black",
           "Style: CN8490-101",
         ],
         images: [
@@ -2031,7 +2031,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Lace up and feel the legacy in a champion running shoe that helped define the '90s. Worn by presidents, revolutionised through collabs and celebrated through rare colourways, its striking visuals, Waffle outsole and exposed Air cushioning keep the Air Max 90 alive and well.",
-          "Colour Shown: Pure Platinum/Glacier Blue/Court Blue/White",
+          "Pure Platinum/Glacier Blue/Court Blue/White",
           "Style: FN6958-001",
         ],
         images: [
@@ -2141,7 +2141,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts a fresh spin on what you know best: crisp leather, bold colours and the perfect amount of flash to make you shine.",
-          "Colour Shown: White/Black",
+          "White/Black",
           "Style: CT2302-100",
         ],
         images: [
@@ -2243,7 +2243,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts a fresh spin on what you know best: crisp leather, bold colours and the perfect amount of flash to make you shine.",
-          "Colour Shown: Black/White",
+          "Black/White",
           "Style: CT2302-002",
         ],
         images: [
@@ -2353,7 +2353,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Created for the hardwood but taken to the streets, this '80s basketball icon returns with classic details and throwback hoops flair. The synthetic leather overlays help the Nike Dunk channel vintage style while its padded, low-cut collar lets you take your game anywhere—in comfort.",
-          "Colour Shown: Baroque Brown/White/Sail/Black",
+          "Baroque Brown/White/Sail/Black",
           "Style: HF4292-200",
         ],
         images: [
@@ -2455,7 +2455,7 @@ const shoesData = [
         outOfStock: false,
         detail: [
           "Obsessed with speed? So are the game's biggest stars. That's why we made this Elite boot with an improved 3/4-length Air Zoom unit. It gives you and the sport's fastest players the propulsive feel needed to break through the back line. The result is the most responsive Mercurial we've ever made, because you demand greatness from yourself and your footwear.",
-          "Colour Shown: Multi-Colour/Multi-Colour",
+          "Multi-Colour/Multi-Colour",
           "Style: FQ8680-900",
         ],
         images: [

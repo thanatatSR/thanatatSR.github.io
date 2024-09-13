@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foot Finesse Online Shop | Foot Finesse</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <link
+      rel="icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__hamburger">
+        <button class="icon icon--hamburger" aria-label="Menu">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="1" y1="12" x2="23" y2="12" />
+            <line x1="1" y1="6" x2="23" y2="6" />
+            <line x1="1" y1="18" x2="23" y2="18" />
+          </svg>
+        </button>
+        <button
+          class="icon icon--favorite"
+          id="favButtonMobile"
+          aria-label="Favorites"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span id="favCountMobile" class="count">0</span>
+        </button>
+      </div>
+      <div class="nav__logo">
+        <a href="index.html">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
+            alt="Nike"
+            class="logo-image"
+          />
+        </a>
+      </div>
+      <div class="nav__menu">
+        <a href="product-catalog.html">New Arrivals</a>
+        <a href="product-catalog.html">Men</a>
+        <a href="product-catalog.html">Women</a>
+        <a href="product-catalog.html">Kids</a>
+      </div>
+      <div class="nav__actions">
+        <div class="nav__search">
+          <input type="text" placeholder="Search" />
+          <button class="nav__search-button" aria-label="Search">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+        <button class="icon icon--user" aria-label="User">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.24 21C19.25 18.57 17.11 17 14.5 17h-5C6.89 17 4.75 18.57 3.76 21M16.5 3a6 6 0 1 1-9 0 6 6 0 0 1 9 0z"
+            />
+          </svg>
+        </button>
+        <button class="icon icon--search" aria-label="Search">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <button
+          class="icon icon--favorites"
+          id="favButton"
+          aria-label="Favorites"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span id="favCount" class="count">0</span>
+        </button>
+        <button class="icon icon--cart" id="cartButton" aria-label="Cart">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+          <span id="cartCount" class="count">0</span>
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="container__row">
+        <div class="container__row__cart-info">
+          <div class="container__row__cart-info__header">
+            <h4 class="container__row__cart-info__header--topic">Your Cart</h4>
+            <p class="container__row__cart-info__header--total">
+              TOTAL (1 item) <span class="strong">£85</span>
+            </p>
+            <p class="container__row__cart-info__header--urgent-message">
+              Items in your bag are not reserved — check out now to make them
+              yours.
+            </p>
+          </div>
+          <div class="container__row__cart-info__banner">
+            <div class="container__row__cart-info__banner__wrapper">
+              <h4 class="container__row__cart-info__banner__wrapper--header">
+                DON'T MISS OUT
+              </h4>
+              <p class="container__row__cart-info__banner__wrapper--content">
+                Grab your items before they sell out.
+              </p>
+            </div>
+          </div>
+          <div class="container__row__cart-info__content">
+            <div class="container__row__cart-info__content__item-list">
+              <div class="cart-item-group">
+                <div class="cart-item-group__wrapper">
+                  <div class="image-container">
+                    <a href="#">
+                      <img
+                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
+                        alt="demo"
+                      />
+                    </a>
+                  </div>
+                  <div class="item-details__wrapper">
+                    <div class="item-details__wrapper__row">
+                      <div class="item-details__info">
+                        <div class="item-details__info__title">
+                          <a href="#">
+                            <p>Nike Air Force 1 '07</p>
+                          </a>
+                          <p>£85.00</p>
+                        </div>
+                        <div class="item-details__info__price">
+                          <p>White/University Red/White</p>
+                        </div>
+                        <div class="item-details__info__size">
+                          <p>Size: 10.5</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-detail__button-group">
+                    <button>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 100 100"
+                      >
+                        <line
+                          x1="20"
+                          y1="20"
+                          x2="80"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                        <line
+                          x1="80"
+                          y1="20"
+                          x2="20"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="cart-item-group__wrapper">
+                  <div class="image-container">
+                    <a href="#">
+                      <img
+                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
+                        alt="demo"
+                      />
+                    </a>
+                  </div>
+                  <div class="item-details__wrapper">
+                    <div class="item-details__wrapper__row">
+                      <div class="item-details__info">
+                        <div class="item-details__info__title">
+                          <a href="#">
+                            <p>Nike Air Force 1 '07</p>
+                          </a>
+                          <p>£85.00</p>
+                        </div>
+                        <div class="item-details__info__price">
+                          <p>White/University Red/White</p>
+                        </div>
+                        <div class="item-details__info__size">
+                          <p>Size: 10.5</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-detail__button-group">
+                    <button>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 100 100"
+                      >
+                        <line
+                          x1="20"
+                          y1="20"
+                          x2="80"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                        <line
+                          x1="80"
+                          y1="20"
+                          x2="20"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="cart-item-group__wrapper">
+                  <div class="image-container">
+                    <a href="#">
+                      <img
+                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
+                        alt="demo"
+                      />
+                    </a>
+                  </div>
+                  <div class="item-details__wrapper">
+                    <div class="item-details__wrapper__row">
+                      <div class="item-details__info">
+                        <div class="item-details__info__title">
+                          <a href="#">
+                            <p>Nike Air Force 1 '07</p>
+                          </a>
+                          <p>£85.00</p>
+                        </div>
+                        <div class="item-details__info__price">
+                          <p>White/University Red/White</p>
+                        </div>
+                        <div class="item-details__info__size">
+                          <p>Size: 10.5</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-detail__button-group">
+                    <button>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 100 100"
+                      >
+                        <line
+                          x1="20"
+                          y1="20"
+                          x2="80"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                        <line
+                          x1="80"
+                          y1="20"
+                          x2="20"
+                          y2="80"
+                          stroke="black"
+                          stroke-width="8"
+                        />
+                      </svg>
+                    </button>
+                    <button>
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container__row__cart-info__usp">
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M64 104l0 88 96 0 0-96L72 96c-4.4 0-8 3.6-8 8zm482 88L465.1 96 384 96l0 96 162 0zm-226 0l0-96-96 0 0 96 96 0zM592 384l-16 0c0 53-43 96-96 96s-96-43-96-96l-128 0c0 53-43 96-96 96s-96-43-96-96l-16 0c-26.5 0-48-21.5-48-48L0 104C0 64.2 32.2 32 72 32l120 0 160 0 113.1 0c18.9 0 36.8 8.3 49 22.8L625 186.5c9.7 11.5 15 26.1 15 41.2L640 336c0 26.5-21.5 48-48 48zm-64 0a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM160 432a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"
+                  />
+                </svg>
+              </span>
+              <p>
+                Free delivery for adiClub members 30 days free returns &
+                exchange
+              </p>
+            </div>
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M50.7 58.5L0 160l208 0 0-128L93.7 32C75.5 32 58.9 42.3 50.7 58.5zM240 160l208 0L397.3 58.5C389.1 42.3 372.5 32 354.3 32L240 32l0 128zm208 32L0 192 0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-224z"
+                  />
+                </svg>
+              </span>
+              <p>30 days free returns & exchange</p>
+            </div>
+          </div>
+        </div>
+        <div class="container__row__payment">
+          <div class="container__row__payment__button-wrapper">
+            <button class="button-checkout">
+              <span>Checkout</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <polyline points="14 6 22 12 14 18" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="container__row__payment__checkout-panel">
+            <h5>Order Summary</h5>
+            <div>
+              <p>1 item</p>
+              <p>£85.00</p>
+            </div>
+            <div>
+              <p>Delivery</p>
+              <p>Free</p>
+            </div>
+            <div class="container__row__payment__checkout-panel__summary">
+              <p>Total</p>
+              <p>£85.00</p>
+            </div>
+          </div>
+          <div class="container__row__payment__coupon-wrapper">
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path
+                    d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z"
+                  />
+                </svg>
+              </span>
+              <p>
+                <strong>Use a promo code</strong>
+              </p>
+            </div>
+          </div>
+          <div class="container__row__payment__payment-method">
+            <h4>Accepted payment methods</h4>
+            <div
+              class="container__row__payment__payment-method__image-container"
+            >
+              <img
+                src="https://www.adidas.co.uk/static/checkout/react/d9c5efe/assets/img/accepted-payment-methods/icon-adidas-mastercard.svg"
+                alt="mastercard"
+              />
+              <img
+                src="https://www.adidas.co.uk/static/checkout/react/d9c5efe/assets/img/accepted-payment-methods/icon-adidas-klarna.svg"
+                alt="klarna"
+              />
+              <img
+                src="https://www.adidas.co.uk/static/checkout/react/d9c5efe/assets/img/accepted-payment-methods/icon-adidas-googlepay.svg"
+                alt="googlepay"
+              />
+              <img
+                src="https://www.adidas.co.uk/static/checkout/react/d9c5efe/assets/img/accepted-payment-methods/icon-adidas-paypal.svg"
+                alt="visa"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <a href="#" class="footer-link">Cookie Settings</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms and Conditions</a>
+      <a href="#" class="footer-link">Imprint</a>
+      <a href="#" class="footer-link">© 2024 YIKE Ladprao Co., Ltd.</a>
+    </footer>
+    <script type="module" src="js/cart.js"></script>
+  </body>
+</html>

@@ -153,34 +153,39 @@
           </svg>
           <span id="favCount" class="count">0</span>
         </button>
-        <button class="icon icon--cart" id="cartButton" aria-label="Cart">
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path
-              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-            />
-          </svg>
-          <span id="cartCount" class="count">0</span>
-        </button>
+        <a href="cart.html">
+          <button class="icon icon--cart" id="cartButton" aria-label="Cart">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span id="cartCount" class="count">0</span>
+          </button>
+        </a>
       </div>
     </nav>
-    <div class="container">
+    <div class="container" id="container">
       <div class="container__row">
-        <div class="container__row__cart-info">
+        <div class="container__row__cart-info". id="container__row__cart-info">
           <div class="container__row__cart-info__header">
             <h4 class="container__row__cart-info__header--topic">Your Cart</h4>
-            <p class="container__row__cart-info__header--total">
+            <p
+              class="container__row__cart-info__header--total"
+              id="container__row__cart-info__header--total"
+            >
               TOTAL (1 item) <span class="strong">£85</span>
             </p>
             <p class="container__row__cart-info__header--urgent-message">
@@ -200,224 +205,7 @@
           </div>
           <div class="container__row__cart-info__content">
             <div class="container__row__cart-info__content__item-list">
-              <div class="cart-item-group">
-                <div class="cart-item-group__wrapper">
-                  <div class="image-container">
-                    <a href="#">
-                      <img
-                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
-                        alt="demo"
-                      />
-                    </a>
-                  </div>
-                  <div class="item-details__wrapper">
-                    <div class="item-details__wrapper__row">
-                      <div class="item-details__info">
-                        <div class="item-details__info__title">
-                          <a href="#">
-                            <p>Nike Air Force 1 '07</p>
-                          </a>
-                          <p>£85.00</p>
-                        </div>
-                        <div class="item-details__info__price">
-                          <p>White/University Red/White</p>
-                        </div>
-                        <div class="item-details__info__size">
-                          <p>Size: 10.5</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-detail__button-group">
-                    <button>
-                      <svg
-                        width="24"
-                        height="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 100 100"
-                      >
-                        <line
-                          x1="20"
-                          y1="20"
-                          x2="80"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                        <line
-                          x1="80"
-                          y1="20"
-                          x2="20"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                      </svg>
-                    </button>
-                    <button>
-                      <svg
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cart-item-group__wrapper">
-                  <div class="image-container">
-                    <a href="#">
-                      <img
-                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
-                        alt="demo"
-                      />
-                    </a>
-                  </div>
-                  <div class="item-details__wrapper">
-                    <div class="item-details__wrapper__row">
-                      <div class="item-details__info">
-                        <div class="item-details__info__title">
-                          <a href="#">
-                            <p>Nike Air Force 1 '07</p>
-                          </a>
-                          <p>£85.00</p>
-                        </div>
-                        <div class="item-details__info__price">
-                          <p>White/University Red/White</p>
-                        </div>
-                        <div class="item-details__info__size">
-                          <p>Size: 10.5</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-detail__button-group">
-                    <button>
-                      <svg
-                        width="24"
-                        height="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 100 100"
-                      >
-                        <line
-                          x1="20"
-                          y1="20"
-                          x2="80"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                        <line
-                          x1="80"
-                          y1="20"
-                          x2="20"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                      </svg>
-                    </button>
-                    <button>
-                      <svg
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cart-item-group__wrapper">
-                  <div class="image-container">
-                    <a href="#">
-                      <img
-                        src="https://static.nike.com/a/images/t_default/a8254cc4-b776-47b2-898f-7e6e1f564c94/NIKE+AIR+FORCE+1+%2707.png"
-                        alt="demo"
-                      />
-                    </a>
-                  </div>
-                  <div class="item-details__wrapper">
-                    <div class="item-details__wrapper__row">
-                      <div class="item-details__info">
-                        <div class="item-details__info__title">
-                          <a href="#">
-                            <p>Nike Air Force 1 '07</p>
-                          </a>
-                          <p>£85.00</p>
-                        </div>
-                        <div class="item-details__info__price">
-                          <p>White/University Red/White</p>
-                        </div>
-                        <div class="item-details__info__size">
-                          <p>Size: 10.5</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-detail__button-group">
-                    <button>
-                      <svg
-                        width="24"
-                        height="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 100 100"
-                      >
-                        <line
-                          x1="20"
-                          y1="20"
-                          x2="80"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                        <line
-                          x1="80"
-                          y1="20"
-                          x2="20"
-                          y2="80"
-                          stroke="black"
-                          stroke-width="8"
-                        />
-                      </svg>
-                    </button>
-                    <button>
-                      <svg
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <div class="cart-item-group" id="cart-item-group"></div>
             </div>
           </div>
           <div class="container__row__cart-info__usp">
@@ -446,7 +234,7 @@
             </div>
           </div>
         </div>
-        <div class="container__row__payment">
+        <div class="container__row__payment" id="container__row__payment">
           <div class="container__row__cart-info__usp mobile">
             <div>
               <span>
@@ -473,7 +261,7 @@
             </div>
           </div>
           <div class="container__row__payment__button-wrapper">
-            <button class="button-checkout">
+            <button class="button" id="button-checkout">
               <span>Checkout</span>
               <span>
                 <svg
@@ -491,7 +279,10 @@
               </span>
             </button>
           </div>
-          <div class="container__row__payment__checkout-panel">
+          <div
+            class="container__row__payment__checkout-panel"
+            id="container__row__payment__checkout-panel"
+          >
             <h5>Order Summary</h5>
             <div>
               <p>1 item</p>
@@ -546,7 +337,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <a href="#" class="footer-link">Cookie Settings</a>
       <a href="#" class="footer-link">Privacy Policy</a>
       <a href="#" class="footer-link">Terms and Conditions</a>

@@ -40,7 +40,11 @@
             <line x1="1" y1="18" x2="23" y2="18" />
           </svg>
         </button>
-        <button class="icon icon--favorite" id="favButtonMobile" aria-label="Favorites">
+        <button
+          class="icon icon--favorite"
+          id="favButtonMobile"
+          aria-label="Favorites"
+        >
           <svg
             fill="none"
             height="24"
@@ -127,7 +131,11 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
         </button>
-        <button class="icon icon--favorites" id="favButton" aria-label="Favorites">
+        <button
+          class="icon icon--favorites"
+          id="favButton"
+          aria-label="Favorites"
+        >
           <svg
             fill="none"
             height="24"
@@ -145,26 +153,28 @@
           </svg>
           <span id="favCount" class="count">0</span>
         </button>
-        <button class="icon icon--cart" id="cartButton" aria-label="Cart">
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path
-              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-            />
-          </svg>
-          <span id="cartCount" class="count">0</span>
-        </button>
+        <a href="cart.html">
+          <button class="icon icon--cart" id="cartButton" aria-label="Cart">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span id="cartCount" class="count">0</span>
+          </button></a
+        >
       </div>
     </nav>
     <div class="container">
@@ -200,7 +210,11 @@
               ></fieldset>
             </div>
             <div class="container__product-info__detail__form">
-              <form class="buying-tools" id="favoriteForm" onsubmit="event.preventDefault()">
+              <form
+                class="buying-tools"
+                id="favoriteForm"
+                onsubmit="event.preventDefault()"
+              >
                 <div class="container__product-info__detail__form__container">
                   <fieldset
                     class="container__product-info__detail__form__size-chart"
@@ -223,8 +237,13 @@
                     ></div>
                   </fieldset>
                   <div class="product-button-group">
-                    <button class="button button--add" id="button--add">Add to Cart</button
-                    ><button class="button button--fav" id="button--fav" onclick="click()">
+                    <button class="button button--add" id="button--add">
+                      Add to Cart</button
+                    ><button
+                      class="button button--fav"
+                      id="button--fav"
+                      onclick="click()"
+                    >
                       <span>Favorite</span>
                       <svg
                         fill="none"

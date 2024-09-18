@@ -40,7 +40,11 @@
             <line x1="1" y1="18" x2="23" y2="18" />
           </svg>
         </button>
-        <button class="icon icon-960" id="favButtonMobile" aria-label="Favorites">
+        <button
+          class="icon icon-960"
+          id="favButtonMobile"
+          aria-label="Favorites"
+        >
           <svg
             fill="none"
             height="24"
@@ -131,7 +135,11 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
         </button>
-        <button class="icon favorite-icon" id="favButton" aria-label="Favorites">
+        <button
+          class="icon favorite-icon"
+          id="favButton"
+          aria-label="Favorites"
+        >
           <svg
             fill="none"
             height="24"
@@ -149,26 +157,28 @@
           </svg>
           <span id="favCount" class="count">0</span>
         </button>
-        <button class="icon cart-icon" id="cartButton" aria-label="Cart">
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path
-              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-            />
-          </svg>
-          <span id="cartCount" class="count">0</span>
-        </button>
+        <a href="cart.html">
+          <button class="icon cart-icon" id="cartButton" aria-label="Cart">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span id="cartCount" class="count">0</span>
+          </button>
+        </a>
       </div>
     </nav>
     <div class="container">
@@ -263,7 +273,11 @@
             <div class="filter-panel-header">
               <h5>
                 <span class="filter-panel-header__title">Filter and Sort</span>
-                <span class="filter-panel-header__clear" onclick="clearAllFilters()">Clear All</span>
+                <span
+                  class="filter-panel-header__clear"
+                  onclick="clearAllFilters()"
+                  >Clear All</span
+                >
                 <span
                   class="filter-panel-header__close"
                   onclick="handleCloseFilterPanel()"
@@ -300,35 +314,62 @@
               </h5>
             </div>
             <div class="filter-panel-body">
-              <details id="filter-panel-body__sorting" class="filter-panel-body__sorting">
+              <details
+                id="filter-panel-body__sorting"
+                class="filter-panel-body__sorting"
+              >
                 <summary>
                   <span>Sort By</span>
                 </summary>
                 <div class="filter-panel-body__sorting__option">
                   <ul>
                     <li onclick="handleSortProduct('best-sellers')">Feature</li>
-                    <li onclick="handleSortProduct('newest-to-oldest')">Newest</li>
-                    <li onclick="handleSortProduct('price-low-to-high')">Price [Low - High]</li>
-                    <li onclick="handleSortProduct('price-high-to-low')">Price [High - Low]</li>
+                    <li onclick="handleSortProduct('newest-to-oldest')">
+                      Newest
+                    </li>
+                    <li onclick="handleSortProduct('price-low-to-high')">
+                      Price [Low - High]
+                    </li>
+                    <li onclick="handleSortProduct('price-high-to-low')">
+                      Price [High - Low]
+                    </li>
                   </ul>
                 </div>
               </details>
-              <details id="filter-panel-body__collection" class="filter-panel-body__collection">
+              <details
+                id="filter-panel-body__collection"
+                class="filter-panel-body__collection"
+              >
                 <summary>
                   <span>Collections</span>
                 </summary>
                 <div class="filter-panel-body__collection__option">
                   <ul>
-                      <li onclick="handleSearchByCollections('Air Force')">Air Force</li>
-                      <li onclick="handleSearchByCollections('Air Max')">Air Max</li>
-                      <li onclick="handleSearchByCollections('Air Presto')">Air Presto</li>
-                      <li onclick="handleSearchByCollections('Alphafly')">Alphafly</li>
-                      <li onclick="handleSearchByCollections('Dunk Low')">Dunk Low</li>
-                      <li onclick="handleSearchByCollections('Mercurial')">Mercurial</li>
+                    <li onclick="handleSearchByCollections('Air Force')">
+                      Air Force
+                    </li>
+                    <li onclick="handleSearchByCollections('Air Max')">
+                      Air Max
+                    </li>
+                    <li onclick="handleSearchByCollections('Air Presto')">
+                      Air Presto
+                    </li>
+                    <li onclick="handleSearchByCollections('Alphafly')">
+                      Alphafly
+                    </li>
+                    <li onclick="handleSearchByCollections('Dunk Low')">
+                      Dunk Low
+                    </li>
+                    <li onclick="handleSearchByCollections('Mercurial')">
+                      Mercurial
+                    </li>
                   </ul>
                 </div>
               </details>
-              <details id="filter-panel-body__product-type" class="filter-panel-body__product-type">
+              <details
+                id="filter-panel-body__product-type"
+                class="filter-panel-body__product-type"
+              >
                 <summary>
                   <span>Product Type</span>
                 </summary>
@@ -387,7 +428,10 @@
                   </ul>
                 </div>
               </details>
-              <details id="filter-panel-body__price" class="filter-panel-body__price">
+              <details
+                id="filter-panel-body__price"
+                class="filter-panel-body__price"
+              >
                 <summary>
                   <span>Price</span>
                 </summary>

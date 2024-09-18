@@ -163,8 +163,8 @@ form {
 
 .container {
   width: 100%;
+  /* height: calc(100vh - 83px - 78px - 30px); */
   max-width: 1280px;
-  flex-grow: 1;
   padding: 0px 15px 30px;
   margin: 0px auto; 
   font-size: 16px;
@@ -364,6 +364,23 @@ form {
   display: none;
 }
 
+.no-item-in-cart {
+  padding: 0px;
+  margin: 120px 0px 0px 0px; /* (max-width: 600px) 80px 0px 0px */
+}
+
+.no-item-in-cart h3 {
+  margin: 0px 0px 40px;
+  font-size: 36px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.no-item-in-cart p {
+  margin: 0px 0px 30px;
+}
+
 .container__row__payment {
   display: block;
   position: sticky;
@@ -375,7 +392,7 @@ form {
   width: 30%;
 }
 
-.button-checkout {
+.button {
   background-color: black;
   border-color: black;
   color: white;
@@ -391,21 +408,36 @@ form {
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.3s;
+  text-transform: uppercase;
 }
 
-.button-checkout:hover {
+.button:hover {
   color: #767677;
 }
 
-.button-checkout svg {
+.button svg {
   margin-top: 5px;
   width: 24px;
   height: 24px;
   transition: all 0.3s;
 }
 
-.button-checkout:hover svg {
+.button:hover svg {
   stroke: #767677;
+}
+
+.button-disabled, .button-disabled svg {
+  color: #767677;
+  cursor: default;
+  stroke: #767677;
+}
+
+.button-get-started {
+  width: auto;
+}
+
+.button-get-started svg {
+  margin-left: 15px;
 }
 
 .container__row__payment__checkout-panel {
@@ -485,6 +517,33 @@ form {
 .container__row__payment__payment-method img {
   margin: 8px 8px 8px 0px;
   height: 30px;
+}
+
+.footer {
+  background-color: #282c31;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 110px;
+  font-weight: lighter;
+  gap: 0.5rem;
+}
+
+.footer-link,
+.footer-text {
+  text-decoration: none;
+  color: #e5e9ed;
+  font-size: 0.75rem;
+}
+
+.footer-link::after {
+  content: "|";
+  margin-left: 0.5rem;
+}
+
+.footer-link:last-of-type::after {
+  content: "";
 }
 
 @media (max-width: 1280px) {
@@ -598,6 +657,10 @@ form {
     max-width: 729px;
   }
 
+  .button--fav--active svg {
+    fill: red;
+  }
+
   .container__row__cart-info__usp {
     display: none;
   }
@@ -620,6 +683,10 @@ form {
 
   .container__row__payment__payment-method {
     order: -1;
+  }
+
+  .footer {
+    margin-top: 130px;
   }
 }
 
@@ -660,29 +727,8 @@ form {
   }
 }
 
-.footer {
-  background-color: #282c31;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: 80px;
-  font-weight: lighter;
-  gap: 0.5rem;
-}
-
-.footer-link,
-.footer-text {
-  text-decoration: none;
-  color: #e5e9ed;
-  font-size: 0.75rem;
-}
-
-.footer-link::after {
-  content: "|";
-  margin-left: 0.5rem;
-}
-
-.footer-link:last-of-type::after {
-  content: "";
+@media (max-width: 574px) {
+  .footer {
+    margin-top: 108px;
+  }
 }

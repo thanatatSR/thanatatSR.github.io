@@ -39,23 +39,25 @@ const checkCart = (cart) => {
               Once you add something to your bag - it will appear here.
               Ready to get started?
             </p>
-            <button class="button button-get-started" id="button-get-started">
-              <span>Get Started</span>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <polyline points="14 6 22 12 14 18" />
-                </svg>
-              </span>
-            </button>
+            <a href="index.html">
+              <button class="button button-get-started" id="button-get-started">
+                <span>Get Started</span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <polyline points="14 6 22 12 14 18" />
+                  </svg>
+                </span>
+              </button>
+            </a>
           </div>`;
     checkoutButton.classList.add("button-disabled");
     checkoutButton.disabled = true;
@@ -66,24 +68,25 @@ const checkCart = (cart) => {
 
 const createCartItem = () => {
   const carts = getCarts();
-  checkCart(carts)
+  checkCart(carts);
 
-  checkoutButton.onclick = checkout;
-  carts.forEach((cart) => {
-    const productId = cart.productId.substring(0, 2);
-    const colorVariantIndex = cart.productId.substring(2);
-    let shoe = shoesData.find((sh) => sh.id === productId);
-    let colorVariant = shoe.colorVariants.find(
-      (cv) => cv.index === colorVariantIndex
-    );
+  if (carts && carts.length > 0) {
+    checkoutButton.onclick = checkout;
+    carts.forEach((cart) => {
+      const productId = cart.productId.substring(0, 2);
+      const colorVariantIndex = cart.productId.substring(2);
+      let shoe = shoesData.find((sh) => sh.id === productId);
+      let colorVariant = shoe.colorVariants.find(
+        (cv) => cv.index === colorVariantIndex
+      );
 
-    cartsList.push(shoe.name);
-    cartsPrice.push(shoe.price);
+      cartsList.push(shoe.name);
+      cartsPrice.push(shoe.price);
 
-    const item = document.createElement("div");
-    item.className = "cart-item-group__wrapper";
-    item.id = `item-${cart.productId}`;
-    item.innerHTML = `<div class="image-container">
+      const item = document.createElement("div");
+      item.className = "cart-item-group__wrapper";
+      item.id = `item-${cart.productId}`;
+      item.innerHTML = `<div class="image-container">
                     <a href="product.html?id=${shoe.id + colorVariant.index}">
                       <img
                         src=${colorVariant.images[0]}
@@ -136,18 +139,18 @@ const createCartItem = () => {
                       </svg>
                     </button>
                   </div>`;
-    cartContainer.appendChild(item);
-  });
+      cartContainer.appendChild(item);
+    });
 
-  const totalPrice = cartProductPriceSum();
-  totalParagraph.innerHTML = `TOTAL (${cartsPrice.length} ${
-    cartsPrice.length > 1 ? "items" : "item"
-  }) <span class="strong">£${totalPrice}</span>`;
-  totalPayment.innerHTML = `<h5>Order Summary</h5>
+    const totalPrice = cartProductPriceSum();
+    totalParagraph.innerHTML = `TOTAL (${cartsPrice.length} ${
+      cartsPrice.length > 1 ? "items" : "item"
+    }) <span class="strong">£${totalPrice}</span>`;
+    totalPayment.innerHTML = `<h5>Order Summary</h5>
             <div>
               <p>${cartsPrice.length} ${
-    cartsPrice.length > 1 ? "items" : "item"
-  }</p>
+      cartsPrice.length > 1 ? "items" : "item"
+    }</p>
               <p>£${totalPrice}</p>
             </div>
             <div>
@@ -158,6 +161,7 @@ const createCartItem = () => {
               <p>Total</p>
               <p>£${totalPrice}</p>
             </div>`;
+  }
 };
 
 const getFavorites = () => {
@@ -208,7 +212,7 @@ const removeProductFromCart = (id) => {
   localStorage.setItem("carts", JSON.stringify(updateCartProducts));
 
   updateCartButtonState();
-  checkCart(getCarts())
+  checkCart(getCarts());
 };
 
 const addEventToButton = () => {

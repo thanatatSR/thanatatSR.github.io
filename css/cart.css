@@ -4,12 +4,6 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-form {
-  display: block;
-  margin-top: 0em;
-  unicode-bidi: isolate;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -163,7 +157,6 @@ form {
 
 .container {
   width: 100%;
-  /* height: calc(100vh - 83px - 78px - 30px); */
   max-width: 1280px;
   padding: 0px 15px 30px;
   margin: 0px auto; 
@@ -379,6 +372,11 @@ form {
 
 .no-item-in-cart p {
   margin: 0px 0px 30px;
+}
+
+.no-item-in-cart a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .container__row__payment {

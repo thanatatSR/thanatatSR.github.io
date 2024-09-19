@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foot Finesse Online Shop | Foot Finesse</title>
+    <link rel="stylesheet" href="css/favorite.css" />
+    <link
+      rel="icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.nike.com/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__hamburger">
+        <button class="icon icon--hamburger" aria-label="Menu">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="1" y1="12" x2="23" y2="12" />
+            <line x1="1" y1="6" x2="23" y2="6" />
+            <line x1="1" y1="18" x2="23" y2="18" />
+          </svg>
+        </button>
+        <button
+          class="icon icon--favorite"
+          id="favButtonMobile"
+          aria-label="Favorites"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span id="favCountMobile" class="count">0</span>
+        </button>
+      </div>
+      <div class="nav__logo">
+        <a href="index.html">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
+            alt="Nike"
+            class="logo-image"
+          />
+        </a>
+      </div>
+      <div class="nav__menu">
+        <a href="product-catalog.html">New Arrivals</a>
+        <a href="product-catalog.html">Men</a>
+        <a href="product-catalog.html">Women</a>
+        <a href="product-catalog.html">Kids</a>
+      </div>
+      <div class="nav__actions">
+        <div class="nav__search">
+          <input type="text" placeholder="Search" />
+          <button class="nav__search-button" aria-label="Search">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+        <button class="icon icon--user" aria-label="User">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.24 21C19.25 18.57 17.11 17 14.5 17h-5C6.89 17 4.75 18.57 3.76 21M16.5 3a6 6 0 1 1-9 0 6 6 0 0 1 9 0z"
+            />
+          </svg>
+        </button>
+        <button class="icon icon--search" aria-label="Search">
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <button
+          class="icon icon--favorites"
+          id="favButton"
+          aria-label="Favorites"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span id="favCount" class="count">0</span>
+        </button>
+        <a href="cart.html">
+          <button class="icon icon--cart" id="cartButton" aria-label="Cart">
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span id="cartCount" class="count">0</span>
+          </button>
+        </a>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- <h4>My Favorite</h4>
+      <p>0 ITEMS</p>
+      <p>
+        You haven't saved any items to your wishlist yet. Start shopping and add
+        your favorite items to your wishlist.
+      </p> -->
+      <div class="favorite-container">
+        <div class="favorite-container-header">
+          <h4>My Favorite</h4>
+          <p>8 ITEMS</p>
+          <p>
+            You haven't saved any items to your wishlist yet. Start shopping and
+            add your favorite items to your wishlist.
+          </p>
+        </div>
+        <!-- <div class="favorite-container-content">
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
+            <div class="product-card promotion bestseller">
+              <img
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
+                alt="Nike Air Force 1 '07"
+              />
+              <div class="product-content">
+                <p class="product-title">Nike Air Force 1 '07</p>
+                <p class="product-price">£119.99</p>
+              </div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </div>
+    <footer class="footer" id="footer">
+      <a href="#" class="footer-link">Cookie Settings</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms and Conditions</a>
+      <a href="#" class="footer-link">Imprint</a>
+      <a href="#" class="footer-link">© 2024 YIKE Ladprao Co., Ltd.</a>
+    </footer>
+    <script type="module" src="js/favorite.js"></script>
+  </body>
+</html>

@@ -40,28 +40,30 @@
             <line x1="1" y1="18" x2="23" y2="18" />
           </svg>
         </button>
-        <button
-          class="icon icon--favorite"
-          id="favButtonMobile"
-          aria-label="Favorites"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+        <a href="favorite.html">
+          <button
+            class="icon icon--favorite"
+            id="favButtonMobile"
+            aria-label="Favorites"
           >
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            />
-          </svg>
-          <span id="favCountMobile" class="count">0</span>
-        </button>
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+            <span id="favCountMobile" class="count">0</span>
+          </button>
+        </a>
       </div>
       <div class="nav__logo">
         <a href="index.html">
@@ -131,28 +133,30 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
         </button>
-        <button
-          class="icon icon--favorites"
-          id="favButton"
-          aria-label="Favorites"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+        <a href="favorite.html">
+          <button
+            class="icon icon--favorites"
+            id="favButton"
+            aria-label="Favorites"
           >
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            />
-          </svg>
-          <span id="favCount" class="count">0</span>
-        </button>
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+            <span id="favCount" class="count">0</span>
+          </button>
+        </a>
         <a href="cart.html">
           <button class="icon icon--cart" id="cartButton" aria-label="Cart">
             <svg
@@ -177,120 +181,16 @@
         </a>
       </div>
     </nav>
-    <div class="container">
-      <!-- <h4>My Favorite</h4>
-      <p>0 ITEMS</p>
-      <p>
-        You haven't saved any items to your wishlist yet. Start shopping and add
-        your favorite items to your wishlist.
-      </p> -->
+    <div class="container" id="container">
       <div class="favorite-container">
-        <div class="favorite-container-header">
-          <h4>My Favorite</h4>
-          <p>8 ITEMS</p>
-          <p>
-            You haven't saved any items to your wishlist yet. Start shopping and
-            add your favorite items to your wishlist.
-          </p>
-        </div>
-        <!-- <div class="favorite-container-content">
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-          <a href="product.html?id=0101" aria-label="Nike Air Force 1 '07">
-            <div class="product-card promotion bestseller">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1d455eb-8447-4b51-a2b3-61db8b7a78fe/NIKE+AIR+FORCE+1+%2707.png"
-                alt="Nike Air Force 1 '07"
-              />
-              <div class="product-content">
-                <p class="product-title">Nike Air Force 1 '07</p>
-                <p class="product-price">£119.99</p>
-              </div>
-            </div>
-          </a>
-        </div> -->
+        <div
+          class="favorite-container-header"
+          id="favorite-container-header"
+        ></div>
+        <div
+          class="favorite-container-content"
+          id="favorite-container-content"
+        ></div>
       </div>
     </div>
     <footer class="footer" id="footer">

@@ -512,9 +512,20 @@ body {
   align-items: center;
 }
 
-.container__row__payment__payment-method img {
-  margin: 8px 8px 8px 0px;
-  height: 30px;
+.container__row__payment__payment-method .payment-method-icon-paypal {
+  height: 16px;
+  width: 60px;
+  margin: 3px 10px 0px 0px;
+}
+
+.container__row__payment__payment-method .payment-method-icon-klarna {
+  height: 24px;
+  width: 62px;
+}
+
+.container__row__payment__payment-method .payment-method-icon-googlepay {
+  height: 42px;
+  width: 62px;
 }
 
 .footer {

@@ -256,7 +256,7 @@ Happy shopping!
   updateFavButtonState();
   updateCartButtonState();
   alert(message);
-  window.location.href = "/frontend-midterm-project/FootFinesse/";
+  window.location.href = "/";
 };
 
 createCartItem();

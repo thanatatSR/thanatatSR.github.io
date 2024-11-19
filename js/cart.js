@@ -215,7 +215,27 @@ const removeProductFromCart = (id) => {
   checkCart(getCarts());
 };
 
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const closeHamburgerButton = document.getElementById(
+  "hamburger-menu-panel-header__close"
+);
+
 const addEventToButton = () => {
+  const collections = document.querySelectorAll(".collection");
+  collections.forEach((collectionElement) => {
+    const listItems = collectionElement.getElementsByTagName("li");
+    for (let i = 0; i < listItems.length; i++) {
+      const listItem = listItems[i];
+      const textContent = listItem.textContent.trim();
+      listItem.onclick = function () {
+        handleSearchByCollections(textContent);
+      };
+    }
+  });
+
+  hamburgerMenu.onclick = handleToggleHamburgerMenu;
+  closeHamburgerButton.onclick = handleToggleHamburgerMenu;
+
   const cartList = getCarts();
   cartList.forEach((product) => {
     const removeButton = document.getElementById(`${product.productId}`);
@@ -257,6 +277,20 @@ Happy shopping!
   updateCartButtonState();
   alert(message);
   window.location.href = "/";
+};
+
+const handleToggleHamburgerMenu = () => {
+  const hamburgerMenuPanel = document.getElementById("hamburger-menu-panel");
+  hamburgerMenuPanel.classList.toggle("hamburger-menu-panel-active");
+};
+
+const handleSearchByCollections = (query) => {
+  if (query) {
+    const currentParams = new URLSearchParams(window.location.search);
+    currentParams.set("search", query);
+    const newURL = `product-catalog.html?${currentParams.toString()}`;
+    window.location.href = newURL;
+  }
 };
 
 createCartItem();

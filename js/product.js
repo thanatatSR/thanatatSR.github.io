@@ -394,6 +394,10 @@ const toggleFavorite = () => {
 const cartButton = document.getElementById("cartButton");
 const addToCartButton = document.getElementById("button--add");
 const cartCount = document.getElementById("cartCount");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const closeHamburgerButton = document.getElementById(
+  "hamburger-menu-panel-header__close"
+);
 
 const getCarts = () => {
   return JSON.parse(localStorage.getItem("carts")) || [];
@@ -404,6 +408,21 @@ const saveCarts = (product) => {
 };
 
 const updateCartButtonState = () => {
+
+  const collections = document.querySelectorAll(".collection");
+  collections.forEach((collectionElement) => {
+    const listItems = collectionElement.getElementsByTagName("li");
+    for (let i = 0; i < listItems.length; i++) {
+      const listItem = listItems[i];
+      const textContent = listItem.textContent.trim();
+      listItem.onclick = function () {
+        handleSearchByCollections(textContent);
+      };
+    }
+  });
+
+  hamburgerMenu.onclick = handleToggleHamburgerMenu;
+  closeHamburgerButton.onclick = handleToggleHamburgerMenu;
   addToCartButton.onclick = addToCart;
   const carts = getCarts();
   cartCount.textContent = carts.length;
@@ -438,6 +457,20 @@ const addToCart = () => {
 
   saveCarts(carts);
   updateCartButtonState();
+};
+
+const handleToggleHamburgerMenu = () => {
+  const hamburgerMenuPanel = document.getElementById("hamburger-menu-panel");
+  hamburgerMenuPanel.classList.toggle("hamburger-menu-panel-active");
+};
+
+const handleSearchByCollections = (query) => {
+  if (query) {
+    const currentParams = new URLSearchParams(window.location.search);
+    currentParams.set("search", query);
+    const newURL = `product-catalog.html?${currentParams.toString()}`;
+    window.location.href = newURL;
+  }
 };
 
 updateFavButtonState();

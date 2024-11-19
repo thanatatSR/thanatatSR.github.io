@@ -23,7 +23,11 @@
   <body>
     <nav class="navbar">
       <div class="hamburger-menu">
-        <button class="icon hamburger-icon" aria-label="Menu">
+        <button
+          class="icon hamburger-icon"
+          aria-label="Menu"
+          onclick="handleToggleHamburgerMenu()"
+        >
           <svg
             fill="none"
             height="24"
@@ -216,7 +220,7 @@
               <button
                 class="filter-button"
                 aria-label="Filter"
-                onclick="handleOpenFilterPanel()"
+                onclick="handleToggleFilterPanel()"
               >
                 Filter and Sort
                 <svg
@@ -243,7 +247,7 @@
               </button>
             </div>
           </div>
-          <button class="icon filter-icon" onclick="handleOpenFilterPanel()">
+          <button class="icon filter-icon" onclick="handleToggleFilterPanel()">
             <svg
               fill="none"
               height="24"
@@ -271,232 +275,438 @@
         <div class="filter-panel" id="filter-panel">
           <div
             class="filter-panel-blur"
-            onclick="handleCloseFilterPanel()"
+            onclick="handleToggleFilterPanel()"
           ></div>
-          <div class="filter-panel-container">
-            <div class="filter-panel-header">
-              <h5>
-                <span class="filter-panel-header__title">Filter and Sort</span>
-                <span
-                  class="filter-panel-header__clear"
-                  onclick="clearAllFilters()"
-                  >Clear All</span
+        </div>
+        <div class="filter-panel-container" id="filter-panel-container">
+          <div class="filter-panel-header">
+            <h5>
+              <span class="filter-panel-header__title">Filter and Sort</span>
+              <span
+                class="filter-panel-header__clear"
+                onclick="clearAllFilters()"
+                >Clear All</span
+              >
+              <span
+                class="filter-panel-header__close"
+                onclick="handleToggleFilterPanel()"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                <span
-                  class="filter-panel-header__close"
-                  onclick="handleCloseFilterPanel()"
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      y1="6"
-                      x2="6"
-                      y2="18"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <line
-                      x1="6"
-                      y1="6"
-                      x2="18"
-                      y2="18"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </h5>
-            </div>
-            <div class="filter-panel-body">
-              <details
-                id="filter-panel-body__sorting"
-                class="filter-panel-body__sorting"
-              >
-                <summary>
-                  <span>Sort By</span>
-                </summary>
-                <div class="filter-panel-body__sorting__option">
-                  <ul>
-                    <li onclick="handleSortProduct('best-sellers')">Feature</li>
-                    <li onclick="handleSortProduct('newest-to-oldest')">
-                      Newest
-                    </li>
-                    <li onclick="handleSortProduct('price-low-to-high')">
-                      Price [Low - High]
-                    </li>
-                    <li onclick="handleSortProduct('price-high-to-low')">
-                      Price [High - Low]
-                    </li>
-                  </ul>
-                </div>
-              </details>
-              <details
-                id="filter-panel-body__collection"
-                class="filter-panel-body__collection"
-              >
-                <summary>
-                  <span>Collections</span>
-                </summary>
-                <div class="filter-panel-body__collection__option">
-                  <ul>
-                    <li onclick="handleSearchByCollections('Air Force')">
-                      Air Force
-                    </li>
-                    <li onclick="handleSearchByCollections('Air Max')">
-                      Air Max
-                    </li>
-                    <li onclick="handleSearchByCollections('Air Presto')">
-                      Air Presto
-                    </li>
-                    <li onclick="handleSearchByCollections('Alphafly')">
-                      Alphafly
-                    </li>
-                    <li onclick="handleSearchByCollections('Dunk Low')">
-                      Dunk Low
-                    </li>
-                    <li onclick="handleSearchByCollections('Mercurial')">
-                      Mercurial
-                    </li>
-                  </ul>
-                </div>
-              </details>
-              <details
-                id="filter-panel-body__product-type"
-                class="filter-panel-body__product-type"
-              >
-                <summary>
-                  <span>Product Type</span>
-                </summary>
-                <div class="filter-panel-body__product-type__option">
-                  <ul>
-                    <li>
-                      <input
-                        onclick=""
-                        type="checkbox"
-                        id="men"
-                        name="type"
-                        value="Men's"
-                      />
-                      <label for="men">Men's</label>
-                    </li>
-                    <li>
-                      <input
-                        onclick=""
-                        type="checkbox"
-                        id="unisex"
-                        name="type"
-                        value="Unisex"
-                      />
-                      <label for="unisex">Unisex</label>
-                    </li>
-                    <li>
-                      <input
-                        onclick=""
-                        type="checkbox"
-                        id="workout"
-                        name="type"
-                        value="Workout"
-                      />
-                      <label for="workout">Workout</label>
-                    </li>
-                    <li>
-                      <input
-                        onclick=""
-                        type="checkbox"
-                        id="running"
-                        name="type"
-                        value="Running"
-                      />
-                      <label for="running">Running</label>
-                    </li>
-                    <li>
-                      <input
-                        onclick=""
-                        type="checkbox"
-                        id="football"
-                        name="type"
-                        value="Football"
-                      />
-                      <label for="football">Football</label>
-                    </li>
-                  </ul>
-                </div>
-              </details>
-              <details
-                id="filter-panel-body__price"
-                class="filter-panel-body__price"
-              >
-                <summary>
-                  <span>Price</span>
-                </summary>
-                <div class="filter-panel-body__price__bar">
-                  <div class="range-container">
-                    <div class="form-control">
-                      <p
-                        class="form-control-container__time__input"
-                        id="from-input"
-                      >
-                        £79
-                      </p>
-                      <p>-</p>
-                      <p
-                        class="form-control-container__time__input"
-                        id="to-input"
-                      >
-                        £295
-                      </p>
-                    </div>
-                    <div class="slider-control">
-                      <input
-                        type="range"
-                        id="from-slider"
-                        value="79"
-                        min="79"
-                        max="295"
-                        onchange="handlePriceFilter()"
-                      />
-                      <input
-                        type="range"
-                        id="to-slider"
-                        value="295"
-                        min="79"
-                        max="295"
-                        onchange="handlePriceFilter()"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </details>
-            </div>
-            <div class="filter-panel-footer">
-              <button class="button-apply" onclick="handleShoeTypeFilter()">
-                <span>Apply</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
+                  <line
+                    x1="18"
+                    y1="6"
+                    x2="6"
+                    y2="18"
+                    stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  >
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <polyline points="14 6 22 12 14 18" />
-                  </svg>
-                </span>
-              </button>
-            </div>
+                  />
+                  <line
+                    x1="6"
+                    y1="6"
+                    x2="18"
+                    y2="18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </h5>
+          </div>
+          <div class="filter-panel-body">
+            <details
+              id="filter-panel-body__sorting"
+              class="filter-panel-body__sorting"
+            >
+              <summary>
+                <span>Sort By</span>
+              </summary>
+              <div class="filter-panel-body__sorting__option">
+                <ul>
+                  <li onclick="handleSortProduct('best-sellers')">Feature</li>
+                  <li onclick="handleSortProduct('newest-to-oldest')">
+                    Newest
+                  </li>
+                  <li onclick="handleSortProduct('price-low-to-high')">
+                    Price [Low - High]
+                  </li>
+                  <li onclick="handleSortProduct('price-high-to-low')">
+                    Price [High - Low]
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="filter-panel-body__collection"
+              class="filter-panel-body__collection"
+            >
+              <summary>
+                <span>Collections</span>
+              </summary>
+              <div class="filter-panel-body__collection__option">
+                <ul>
+                  <li onclick="handleSearchByCollections('Air Force')">
+                    Air Force
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Max')">
+                    Air Max
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Presto')">
+                    Air Presto
+                  </li>
+                  <li onclick="handleSearchByCollections('Alphafly')">
+                    Alphafly
+                  </li>
+                  <li onclick="handleSearchByCollections('Dunk Low')">
+                    Dunk Low
+                  </li>
+                  <li onclick="handleSearchByCollections('Mercurial')">
+                    Mercurial
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="filter-panel-body__product-type"
+              class="filter-panel-body__product-type"
+            >
+              <summary>
+                <span>Product Type</span>
+              </summary>
+              <div class="filter-panel-body__product-type__option">
+                <ul>
+                  <li>
+                    <input
+                      onclick=""
+                      type="checkbox"
+                      id="men"
+                      name="type"
+                      value="Men's"
+                    />
+                    <label for="men">Men's</label>
+                  </li>
+                  <li>
+                    <input
+                      onclick=""
+                      type="checkbox"
+                      id="unisex"
+                      name="type"
+                      value="Unisex"
+                    />
+                    <label for="unisex">Unisex</label>
+                  </li>
+                  <li>
+                    <input
+                      onclick=""
+                      type="checkbox"
+                      id="workout"
+                      name="type"
+                      value="Workout"
+                    />
+                    <label for="workout">Workout</label>
+                  </li>
+                  <li>
+                    <input
+                      onclick=""
+                      type="checkbox"
+                      id="running"
+                      name="type"
+                      value="Running"
+                    />
+                    <label for="running">Running</label>
+                  </li>
+                  <li>
+                    <input
+                      onclick=""
+                      type="checkbox"
+                      id="football"
+                      name="type"
+                      value="Football"
+                    />
+                    <label for="football">Football</label>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="filter-panel-body__price"
+              class="filter-panel-body__price"
+            >
+              <summary>
+                <span>Price</span>
+              </summary>
+              <div class="filter-panel-body__price__bar">
+                <div class="range-container">
+                  <div class="form-control">
+                    <p
+                      class="form-control-container__time__input"
+                      id="from-input"
+                    >
+                      £79
+                    </p>
+                    <p>-</p>
+                    <p
+                      class="form-control-container__time__input"
+                      id="to-input"
+                    >
+                      £295
+                    </p>
+                  </div>
+                  <div class="slider-control">
+                    <input
+                      type="range"
+                      id="from-slider"
+                      value="79"
+                      min="79"
+                      max="295"
+                      onchange="handlePriceFilter()"
+                    />
+                    <input
+                      type="range"
+                      id="to-slider"
+                      value="295"
+                      min="79"
+                      max="295"
+                      onchange="handlePriceFilter()"
+                    />
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="filter-panel-footer">
+            <button class="button-apply" onclick="handleShoeTypeFilter()">
+              <span>Apply</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <polyline points="14 6 22 12 14 18" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="hamburger-menu-panel" id="hamburger-menu-panel">
+          <div class="hamburger-menu-panel-header">
+            <a
+              href="index.html"
+              onclick="localStorage.removeItem('selectedLink')"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
+                alt="Nike"
+                class="logo-image"
+              />
+            </a>
+
+            <span
+              class="hamburger-menu-panel-header__close"
+              onclick="handleToggleHamburgerMenu()"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  y1="6"
+                  x2="6"
+                  y2="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <line
+                  x1="6"
+                  y1="6"
+                  x2="18"
+                  y2="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="hamburger-menu-panel-body">
+            <a href="product-catalog.html">
+              <details
+                id="hamburger-menu-panel-body__new_arrivals"
+                class="hamburger-menu-panel-body__new_arrivals"
+              >
+                <summary>
+                  <span>New Arrivals</span>
+                </summary>
+              </details>
+            </a>
+            <details
+              id="hamburger-menu-panel-body__men"
+              class="hamburger-menu-panel-body__men"
+            >
+              <summary>
+                <span>Men</span>
+              </summary>
+              <div class="hamburger-menu-panel-body__men__option">
+                <ul>
+                  <li onclick="handleSearchByCollections('Air Force')">
+                    Air Force
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Max')">
+                    Air Max
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Presto')">
+                    Air Presto
+                  </li>
+                  <li onclick="handleSearchByCollections('Alphafly')">
+                    Alphafly
+                  </li>
+                  <li onclick="handleSearchByCollections('Dunk Low')">
+                    Dunk Low
+                  </li>
+                  <li onclick="handleSearchByCollections('Mercurial')">
+                    Mercurial
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="hamburger-menu-panel-body__women"
+              class="hamburger-menu-panel-body__women"
+            >
+              <summary>
+                <span>Women</span>
+              </summary>
+              <div class="hamburger-menu-panel-body__women__option">
+                <ul>
+                  <li onclick="handleSearchByCollections('Air Force')">
+                    Air Force
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Max')">
+                    Air Max
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Presto')">
+                    Air Presto
+                  </li>
+                  <li onclick="handleSearchByCollections('Alphafly')">
+                    Alphafly
+                  </li>
+                  <li onclick="handleSearchByCollections('Dunk Low')">
+                    Dunk Low
+                  </li>
+                  <li onclick="handleSearchByCollections('Mercurial')">
+                    Mercurial
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="hamburger-menu-panel-body__kids"
+              class="hamburger-menu-panel-body__kids"
+            >
+              <summary>
+                <span>Kids</span>
+              </summary>
+              <div class="hamburger-menu-panel-body__kids__option">
+                <ul>
+                  <li onclick="handleSearchByCollections('Air Force')">
+                    Air Force
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Max')">
+                    Air Max
+                  </li>
+                  <li onclick="handleSearchByCollections('Air Presto')">
+                    Air Presto
+                  </li>
+                  <li onclick="handleSearchByCollections('Alphafly')">
+                    Alphafly
+                  </li>
+                  <li onclick="handleSearchByCollections('Dunk Low')">
+                    Dunk Low
+                  </li>
+                  <li onclick="handleSearchByCollections('Mercurial')">
+                    Mercurial
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__order-tracker"
+              class="hamburger-menu-panel-customer-service__order-tracker customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Order Tracker</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__account"
+              class="hamburger-menu-panel-customer-service__account customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Account</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__store-finder"
+              class="hamburger-menu-panel-customer-service__store-finder customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Store Finder</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__help"
+              class="hamburger-menu-panel-customer-service__help customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Help</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__exchange-and-returns"
+              class="hamburger-menu-panel-customer-service__exchange-and-returns customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Exchange & Returns</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__become-a-member"
+              class="hamburger-menu-panel-customer-service__become-a-member customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Become a Member</span>
+              </summary>
+            </details>
+            <details
+              id="hamburger-menu-panel-customer-service__gift-cards"
+              class="hamburger-menu-panel-customer-service__gift-cards customer-service"
+            >
+              <summary>
+                <span class="customer-service-span">Gift Cards</span>
+              </summary>
+            </details>
           </div>
         </div>
       </div>

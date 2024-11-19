@@ -240,5 +240,19 @@ const updateCartButtonState = () => {
   }
 };
 
+const handleToggleHamburgerMenu = () => {
+  const hamburgerMenuPanel = document.getElementById("hamburger-menu-panel");
+  hamburgerMenuPanel.classList.toggle("hamburger-menu-panel-active");
+}
+
+const handleSearchByCollections = (query) => {
+  if (query) {
+    const currentParams = new URLSearchParams(window.location.search);
+    currentParams.set("search", query);
+    const newURL = `product-catalog.html?${currentParams.toString()}`;
+    window.location.href = newURL;
+  }
+};
+
 updateFavButtonState();
 updateCartButtonState();

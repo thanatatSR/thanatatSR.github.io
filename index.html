@@ -19,11 +19,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <div class="hamburger-menu">
-        <button class="icon hamburger-icon" aria-label="Menu">
+        <button
+          class="icon hamburger-icon"
+          aria-label="Menu"
+          onclick="handleToggleHamburgerMenu()"
+        >
           <svg
             fill="none"
             height="24"
@@ -196,12 +204,14 @@
               />
             </div>
           </a>
-          <div class="mobile-image-wrapper">
-            <img
-              src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_393,c_limit/2245bf60-af74-4b48-86f5-d0781832c47f/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87-nike.png"
-              alt="Nike Electric Pack"
-            />
-          </div>
+          <a href="product-catalog.html">
+            <div class="mobile-image-wrapper">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_393,c_limit/2245bf60-af74-4b48-86f5-d0781832c47f/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87-nike.png"
+                alt="Nike Electric Pack"
+              />
+            </div>
+          </a>
           <div class="text-wrapper">
             <h3 class="text-title">THE WINNER&#39;S CURSE</h3>
             <p class="text-subtitle">
@@ -316,6 +326,206 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="hamburger-menu-panel" id="hamburger-menu-panel">
+        <div class="hamburger-menu-panel-header">
+          <a
+            href="index.html"
+            onclick="localStorage.removeItem('selectedLink')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DUBOQXev1B62Y3Qoi_eJCWQ0RqePgvh0NQ&s"
+              alt="Nike"
+              class="logo-image"
+            />
+          </a>
+
+          <span
+            class="hamburger-menu-panel-header__close"
+            onclick="handleToggleHamburgerMenu()"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="hamburger-menu-panel-body">
+          <a href="product-catalog.html">
+            <details
+              id="hamburger-menu-panel-body__new_arrivals"
+              class="hamburger-menu-panel-body__new_arrivals"
+            >
+              <summary>
+                <span>New Arrivals</span>
+              </summary>
+            </details>
+          </a>
+          <details
+            id="hamburger-menu-panel-body__men"
+            class="hamburger-menu-panel-body__men"
+          >
+            <summary>
+              <span>Men</span>
+            </summary>
+            <div class="hamburger-menu-panel-body__men__option">
+              <ul>
+                <li onclick="handleSearchByCollections('Air Force')">
+                  Air Force
+                </li>
+                <li onclick="handleSearchByCollections('Air Max')">Air Max</li>
+                <li onclick="handleSearchByCollections('Air Presto')">
+                  Air Presto
+                </li>
+                <li onclick="handleSearchByCollections('Alphafly')">
+                  Alphafly
+                </li>
+                <li onclick="handleSearchByCollections('Dunk Low')">
+                  Dunk Low
+                </li>
+                <li onclick="handleSearchByCollections('Mercurial')">
+                  Mercurial
+                </li>
+              </ul>
+            </div>
+          </details>
+          <details
+            id="hamburger-menu-panel-body__women"
+            class="hamburger-menu-panel-body__women"
+          >
+            <summary>
+              <span>Women</span>
+            </summary>
+            <div class="hamburger-menu-panel-body__women__option">
+              <ul>
+                <li onclick="handleSearchByCollections('Air Force')">
+                  Air Force
+                </li>
+                <li onclick="handleSearchByCollections('Air Max')">Air Max</li>
+                <li onclick="handleSearchByCollections('Air Presto')">
+                  Air Presto
+                </li>
+                <li onclick="handleSearchByCollections('Alphafly')">
+                  Alphafly
+                </li>
+                <li onclick="handleSearchByCollections('Dunk Low')">
+                  Dunk Low
+                </li>
+                <li onclick="handleSearchByCollections('Mercurial')">
+                  Mercurial
+                </li>
+              </ul>
+            </div>
+          </details>
+          <details
+            id="hamburger-menu-panel-body__kids"
+            class="hamburger-menu-panel-body__kids"
+          >
+            <summary>
+              <span>Kids</span>
+            </summary>
+            <div class="hamburger-menu-panel-body__kids__option">
+              <ul>
+                <li onclick="handleSearchByCollections('Air Force')">
+                  Air Force
+                </li>
+                <li onclick="handleSearchByCollections('Air Max')">Air Max</li>
+                <li onclick="handleSearchByCollections('Air Presto')">
+                  Air Presto
+                </li>
+                <li onclick="handleSearchByCollections('Alphafly')">
+                  Alphafly
+                </li>
+                <li onclick="handleSearchByCollections('Dunk Low')">
+                  Dunk Low
+                </li>
+                <li onclick="handleSearchByCollections('Mercurial')">
+                  Mercurial
+                </li>
+              </ul>
+            </div>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__order-tracker"
+            class="hamburger-menu-panel-customer-service__order-tracker customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Order Tracker</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__account"
+            class="hamburger-menu-panel-customer-service__account customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Account</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__store-finder"
+            class="hamburger-menu-panel-customer-service__store-finder customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Store Finder</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__help"
+            class="hamburger-menu-panel-customer-service__help customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Help</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__exchange-and-returns"
+            class="hamburger-menu-panel-customer-service__exchange-and-returns customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Exchange & Returns</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__become-a-member"
+            class="hamburger-menu-panel-customer-service__become-a-member customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Become a Member</span>
+            </summary>
+          </details>
+          <details
+            id="hamburger-menu-panel-customer-service__gift-cards"
+            class="hamburger-menu-panel-customer-service__gift-cards customer-service"
+          >
+            <summary>
+              <span class="customer-service-span">Gift Cards</span>
+            </summary>
+          </details>
+        </div>
       </div>
     </div>
     <footer class="footer">

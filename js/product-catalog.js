@@ -398,14 +398,11 @@ const loadSelectedLink = () => {
   }
 };
 
-const handleOpenFilterPanel = () => {
+const handleToggleFilterPanel = () => {
   const filterPanel = document.getElementById("filter-panel");
-  filterPanel.classList.add("filter-panel-active");
-};
-
-const handleCloseFilterPanel = () => {
-  const filterPanel = document.getElementById("filter-panel");
-  filterPanel.classList.remove("filter-panel-active");
+  filterPanel.classList.toggle("filter-panel-active");
+  const filterPanelContainer = document.getElementById("filter-panel-container");
+  filterPanelContainer.classList.toggle("filter-panel-container-active");
 };
 
 const updateCheckboxesFromURL = () => {
@@ -599,6 +596,11 @@ const updateCartButtonState = () => {
     cartCount.classList.add("count--active");
   }
 };
+
+const handleToggleHamburgerMenu = () => {
+  const hamburgerMenuPanel = document.getElementById("hamburger-menu-panel");
+  hamburgerMenuPanel.classList.toggle("hamburger-menu-panel-active");
+}
 
 updateFavButtonState();
 updateCartButtonState();

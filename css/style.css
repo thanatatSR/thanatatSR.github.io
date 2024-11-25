@@ -81,8 +81,18 @@ body {
 }
 
 .hamburger-menu-panel-body a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0px 30px;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  text-transform: uppercase;
   text-decoration: none;
   color: #111111;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 24px;
 }
 
 .hamburger-menu-panel-body__new_arrivals summary::after {
@@ -112,7 +122,8 @@ body {
   padding: 0px;
 }
 
-.hamburger-menu-panel-body details:nth-child(4), .hamburger-menu-panel-body details:nth-child(11) {
+.hamburger-menu-panel-body details:nth-child(4),
+.hamburger-menu-panel-body details:nth-child(11) {
   border-bottom: 1px solid #eceff1;
 }
 
@@ -418,7 +429,7 @@ details div li label {
   font-size: 5rem;
   line-height: 0.9;
   letter-spacing: -3px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 8px 0px;
 }
 

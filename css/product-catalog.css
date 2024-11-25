@@ -85,6 +85,22 @@ body {
   color: #111111;
 }
 
+.hamburger-menu-panel-body__new_arrivals {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0px 30px;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111111;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
 .hamburger-menu-panel-body__new_arrivals summary::after {
   content: "";
 }

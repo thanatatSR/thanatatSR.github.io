@@ -148,6 +148,7 @@ const createElement = () => {
   if (colorVariant.bestseller) {
     const heroBadge = document.createElement("div");
     heroBadge.className = "hero-badge";
+    heroBadge.id = "hero-badge";
     heroBadge.innerHTML = `<svg height="20px" width="20px" fill="#111" viewBox="0 0 25 32">
               <path
                 d="M12.48 4l-3.04 8.96-9.44.32 7.6 5.6L4.96 28l7.68-5.44 7.84 5.28-2.8-9.04 7.52-5.76-9.52-.08z"
@@ -327,6 +328,146 @@ const createElement = () => {
           </p>`
               : ""
           }`;
+
+  addToBagModal.innerHTML = `<button class="add-to-bag-modal__overlay"></button>
+  <div role="dialog" class="add-to-bag-modal__main">
+    <div class="add-to-bag-modal__main-title" id="add-to-bag-modal__main-title"></div>
+    <div class="add-to-bag-modal__main-content">
+      <div class="add-to-bag-modal__main-content__product">
+        <div class="add-to-bag-modal__main-content__product-image">
+          <img
+            src="${colorVariant.images[0]}"
+            alt="${shoe.name}"
+          />
+        </div>
+        <div
+          class="add-to-bag-modal__main-content__product-info show-only-desktop"
+        >
+          <h5>${shoe.name}</h5>
+          <p class="add-to-bag-modal__main-content__product-info__price" id="add-to-bag-modal__main-content__product-info__price">
+            £${shoe.price}
+          </p>
+          <p>Colour: ${colorVariant.detail[1]}</p>
+          <p id="add-to-bag-modal__main-content__product-info__size">Size: </p>
+          <p>Quantity: 1</p>
+        </div>
+        <div
+          class="add-to-bag-modal__main-content__product-info show-only-mobile"
+        >
+          <div>
+            <h5>${shoe.name}</h5>
+            <p id="add-to-bag-modal__main-content__product-info__size">Size: </p>
+          </div>
+          <p class="add-to-bag-modal__main-content__product-info__price" id="add-to-bag-modal__main-content__product-info__price">
+          £${shoe.price}
+          </p>
+        </div>
+      </div>
+      <div class="add-to-bag-modal__main-content__summary">
+        <h5 class="show-only-desktop">Your Bag</h5>
+        <p class="show-only-desktop" id="cart-items">1 item</p>
+        <div class="row show-only-desktop">
+          <p>Total Product Cost:</p>
+          <p id="cart-products-cost"></p>
+        </div>
+        <div class="row show-only-desktop">
+          <p>Total Delivery Cost:</p>
+          <p>Free</p>
+        </div>
+        <div class="divider show-only-desktop"></div>
+        <div class="row bold show-only-desktop">
+          <p>Total:</p>
+          <p id="cart-total-cost"></p>
+        </div>
+        <p class="show-only-desktop">(inclusive of tax)</p>
+        <a href="cart.html" class="modal-button">
+          <span>View Cart</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <polyline points="14 6 22 12 14 18" />
+            </svg>
+          </span>
+        </a>
+        <div id="continue-shopping-button-wrapper"></div>
+      </div>
+    </div>
+  </div>`;
+
+  const addToBagModalTitleH1 = document.createElement("h1");
+  addToBagModalTitleH1.innerHTML = `Added To Bag!`;
+  const addToBagModalCloseButton = document.createElement("span");
+  addToBagModalCloseButton.classList = "add-to-bag-modal__close-button";
+  addToBagModalCloseButton.innerHTML = `<svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            y1="6"
+            x2="6"
+            y2="18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>`;
+  addToBagModalCloseButton.onclick = closeModal;
+
+  const addToBagModalTitle = document.getElementById(
+    "add-to-bag-modal__main-title"
+  );
+  addToBagModalTitle.append(
+    addToBagModalTitleH1,
+    addToBagModalCloseButton
+  );
+
+  const addToBagModalContinueButton = document.createElement("button");
+  addToBagModalContinueButton.classList =
+    "modal-button continue-shopping-button";
+  addToBagModalContinueButton.innerHTML = `<span>Continue Shopping</span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <polyline points="14 6 22 12 14 18" />
+              </svg>
+            </span>`;
+  addToBagModalContinueButton.onclick = closeModal;
+
+  const addToBagModalButtonWrapper = document.getElementById(
+    "continue-shopping-button-wrapper"
+  );
+  addToBagModalButtonWrapper.appendChild(addToBagModalContinueButton);
 };
 
 const addFavButton = document.getElementById("button--fav");
@@ -398,6 +539,7 @@ const hamburgerMenu = document.getElementById("hamburger-menu");
 const closeHamburgerButton = document.getElementById(
   "hamburger-menu-panel-header__close"
 );
+const addToBagModal = document.getElementById("add-to-bag-modal");
 
 const getCarts = () => {
   return JSON.parse(localStorage.getItem("carts")) || [];
@@ -408,7 +550,6 @@ const saveCarts = (product) => {
 };
 
 const updateCartButtonState = () => {
-
   const collections = document.querySelectorAll(".collection");
   collections.forEach((collectionElement) => {
     const listItems = collectionElement.getElementsByTagName("li");
@@ -437,9 +578,18 @@ const addToCart = () => {
     'input[name="size-radio"]:checked'
   );
   const carts = getCarts();
+
+  const productSize = document.getElementById(
+    "add-to-bag-modal__main-content__product-info__size"
+  );
+  productSize.innerHTML = `Size: ${selectedSize.value}`;
+
   const existingProduct = carts.findIndex(
     (cart) => cart.productId === productId
   );
+
+  let shoe = shoesData.find((sh) => sh.id === productId.substring(0, 2));
+
   if (existingProduct === -1) {
     if (!selectedSize) {
       alert("Please select a size before adding to favorites.");
@@ -448,8 +598,25 @@ const addToCart = () => {
     const cartItem = {
       productId: productId,
       size: selectedSize.value,
+      price: shoe.price,
     };
     carts.push(cartItem);
+
+    const heroBadge = document.getElementById("hero-badge");
+    heroBadge.style.display = "none";
+    addToBagModal.classList.toggle("add-to-bag-modal-active");
+
+    const totalCartCost = carts.reduce(
+      (total, cart) => total + parseFloat(cart.price),
+      0
+    );
+
+    const cartItems = document.getElementById("cart-items");
+    const cartProductsCost = document.getElementById("cart-products-cost");
+    const cartTotalCost = document.getElementById("cart-total-cost");
+    cartItems.innerHTML = `${carts.length} item${carts.length > 1 ? "s" : ""}`;
+    cartProductsCost.innerHTML = `£${totalCartCost.toFixed(2)}`;
+    cartTotalCost.innerHTML = `£${totalCartCost.toFixed(2)}`;
   } else {
     alert("You already have this product in cart");
     return;
@@ -471,6 +638,12 @@ const handleSearchByCollections = (query) => {
     const newURL = `product-catalog.html?${currentParams.toString()}`;
     window.location.href = newURL;
   }
+};
+
+const closeModal = () => {
+  addToBagModal.classList.toggle("add-to-bag-modal-active");
+  const heroBadge = document.getElementById("hero-badge");
+  heroBadge.style.display = "flex";
 };
 
 updateFavButtonState();

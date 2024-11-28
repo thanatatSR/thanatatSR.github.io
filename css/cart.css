@@ -275,7 +275,7 @@ details div li label {
   text-decoration: none;
   color: black;
   font-size: 1rem;
-  padding: 1rem 0%;
+  padding: 1.5rem 0%;
   position: relative;
 }
 
@@ -589,7 +589,7 @@ details div li label {
 
 .no-item-in-cart {
   padding: 0px;
-  margin: 120px 0px 0px 0px; /* (max-width: 600px) 80px 0px 0px */
+  margin: 120px 0px 0px 0px;
 }
 
 .no-item-in-cart h3 {

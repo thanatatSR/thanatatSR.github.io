@@ -101,7 +101,9 @@ const createCartItem = () => {
                           <a href="product.html?id=${cart.productId}">
                             <p>${shoe.name}</p>
                           </a>
-                          <p>£${shoe.price}</p>
+                          <p id="item-price-${cart.productId}">£${
+        shoe.price
+      }</p>
                         </div>
                         <div class="item-details__info__price">
                           <p>${colorVariant.detail[1]}</p>
@@ -148,10 +150,10 @@ const createCartItem = () => {
     }) <span class="strong">£${totalPrice}</span>`;
     totalPayment.innerHTML = `<h5>Order Summary</h5>
             <div>
-              <p>${cartsPrice.length} ${
+              <p id="checkout-items-amount">${cartsPrice.length} ${
       cartsPrice.length > 1 ? "items" : "item"
     }</p>
-              <p>£${totalPrice}</p>
+              <p id="checkout-items-price">£${totalPrice}</p>
             </div>
             <div>
               <p>Delivery</p>
@@ -159,7 +161,7 @@ const createCartItem = () => {
             </div>
             <div class="container__row__payment__checkout-panel__summary">
               <p>Total</p>
-              <p>£${totalPrice}</p>
+              <p id="checkout-items-total-price">£${totalPrice}</p>
             </div>`;
   }
 };
@@ -203,6 +205,26 @@ const removeProductFromCart = (id) => {
   const elementToRemove = document.getElementById(`item-${id}`);
   elementToRemove.style.display = "none";
   elementToRemove.remove;
+  const checkoutItemsAmount = document.getElementById("checkout-items-amount");
+  const checkoutItemsPrice = document.getElementById("checkout-items-price");
+  const checkoutItemsTotalPrice = document.getElementById(
+    "checkout-items-total-price"
+  );
+  const removePrice = document
+    .getElementById(`item-price-${id}`)
+    .innerText.slice(1);
+  const oldCheckoutAmount = checkoutItemsAmount.innerText.split(" ")[0];
+  const oldCheckoutPrice = checkoutItemsPrice.innerText.slice(1);
+
+  checkoutItemsAmount.innerHTML = `${parseInt(oldCheckoutAmount) - 1} ${
+    parseInt(oldCheckoutAmount) - 1 > 1 ? "items" : "item"
+  }`;
+  checkoutItemsPrice.innerHTML = `£${(
+    parseFloat(oldCheckoutPrice) - parseFloat(removePrice)
+  ).toFixed(2)}`;
+  checkoutItemsTotalPrice.innerHTML = `£${(
+    parseFloat(oldCheckoutPrice) - parseFloat(removePrice)
+  ).toFixed(2)}`;
 
   const cartProductList = getCarts();
 

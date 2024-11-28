@@ -275,7 +275,7 @@ details div li label {
   text-decoration: none;
   color: black;
   font-size: 1rem;
-  padding: 1rem 0%;
+  padding: 1.5rem 0%;
   position: relative;
 }
 
@@ -389,7 +389,7 @@ details div li label {
   padding: 0px 15px;
   margin: 60px 17% 0px;
   width: 65%;
-  height: 66vh; /* */
+  height: 66vh;
 }
 
 .favorite-container {
@@ -402,7 +402,7 @@ details div li label {
 .favorite-container-header {
   justify-content: center;
   padding: 0px 30px;
-  margin-top: 90px; /* */
+  margin-top: 90px;
 }
 
 .favorite-container-header h4 {
